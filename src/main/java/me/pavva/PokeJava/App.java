@@ -255,21 +255,7 @@ public class App { //Contains public static void main(String[] args) and the mai
                 throw new IllegalArgumentException(ANSI_RED + "Please enter a number between 1 and 4, inclusive" + ANSI_RESET);
 
             }
-
-            if (yourPoke.getHealth() < 0.0 && opponentPoke.getHealth() > 0.0) {
-                
-                System.out.println("Sorry, but your opponent won.");
-                System.out.println(yourPoke.getName() + " has fainted.");
-                System.out.println(opponentPoke.getName() + " has " + opponentPoke.getHealth() + " health left.");
-
-            } else if (yourPoke.getHealth() > 0.0 && opponentPoke.getHealth() < 0.0) {
-                
-                System.out.println("Congratulations! You won!");
-                System.out.println(opponentPoke.getName() + " has fainted.");
-                System.out.println(yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
-
-            }
-
+            
             opponentPoke.setUsedMove(rand.nextInt(4));
 
             if (opponentPoke.getUsedMove() == 1) {
