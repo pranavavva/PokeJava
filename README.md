@@ -22,6 +22,49 @@ A Pokemon Battle Simulator built in Java. Uses the Gradle build automation syste
     java -jar PokeJava.jar
     ```
 
-# LICENSING
+# License
 
-Free to use by anyone, provided you include a copy of the LICENSE in your distributions.
+This project is licensed under the MIT License, 
+which declares anyone can fork, adapt, and change the code in any way and use it for private, public, or commercial uses, 
+provided you include a copy of the LICENSE in your redistribution.
+
+# Project Tree
+
+```
+.
+├── LICENSE
+├── README.md
+├── build
+│   ├── classes
+│   │   └── main
+│   │       └── me
+│   │           └── pavva
+│   │               └── PokeJava
+│   │                   ├── App.class
+│   │                   └── Pokemon.class
+│   ├── dependency-cache
+│   ├── libs
+│   │   └── PokeJava.jar
+│   └── tmp
+│       ├── compileJava
+│       │   └── emptySourcePathRef
+│       └── jar
+│           └── MANIFEST.MF
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
+└── src
+    └── main
+        └── java
+            └── me
+                └── pavva
+                    └── PokeJava
+                        ├── App.java
+                        └── Pokemon.java
+
+```
