@@ -1,6 +1,12 @@
-# PokeJava
+# PokeJava - v1.0-SNAPSHOT
 
 A Pokemon Battle Simulator built in Java. Uses the Gradle build automation system.
+
+# Instructions
+
+The `.jar` file is already pre-compiled, it should be located in the `build/libs` folder (see the Project Tree below).
+From the root of the project, run the `ClickToRun.bat` or `ClickToRun.sh` depending on whether you are running a Windows machine or UNIX-like.
+After that, simply follow the in-game instructions! Have fun
 
 # Compilation
 
@@ -32,6 +38,8 @@ provided you include a copy of the LICENSE in your redistribution.
 
 ```
 .
+├── ClickToRun.bat
+├── ClickToRun.sh
 ├── LICENSE
 ├── README.md
 ├── build
