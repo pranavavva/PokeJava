@@ -1,0 +1,20 @@
+body {
+    background-color: khaki;
+	background-repeat: repeat-x;
+	background-position: left top;
+	color: black;
+	font-family: "Comic Sans MS", Sans-Serif, Times New Roman;
+}
+
+h1, h2 {
+	color: black;
+}
+
+div {
+	word-wrap: break-word;
+	width: 1240px;
+}
+
+p.advert {
+	font-size: 32px;
+}
