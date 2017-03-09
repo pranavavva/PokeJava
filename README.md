@@ -1,4 +1,4 @@
-# PokeJava - v1.0-SNAPSHOT
+# PokeJava - v1.0
 
 A Pokemon Battle Simulator built in Java. Uses the Gradle build automation system.
 
