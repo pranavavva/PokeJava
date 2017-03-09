@@ -3,7 +3,6 @@ package me.pavva.PokeJava;
 import java.util.Scanner; //User input
 import java.util.Random; //Random numbers
 
-//TODO: Create JavaDoc for variables, class, object methods
 public class App {
 
     @SuppressWarnings("unused")

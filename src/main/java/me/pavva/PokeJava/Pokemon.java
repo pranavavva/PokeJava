@@ -1,7 +1,5 @@
 package me.pavva.PokeJava;
 
-//TODO Create JavaDoc
-
 public class Pokemon { //Pokemon Object Constructors and get-set methods
 
     private String name;
