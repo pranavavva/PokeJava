@@ -88,7 +88,8 @@ public class App {
                                + yourPoke.getMove3() + ", " + yourPoke.getMove4());
             System.out.println("Type the number corresponding to the move you would like " + yourPoke.getName() + " to use. Select '5' to switch out to a different Pokemon.");
             yourPoke.setUsedMove(s.nextInt());
-
+            
+            
             if (yourPoke.getUsedMove() == 1) {
 
                 opponentPoke.setHealth(opponentPoke.getHealth() - 20);
