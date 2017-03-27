@@ -33,8 +33,9 @@ public class App {
         Pokemon Chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
         Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
         Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Aqua Jet", "Hydro Cannon", "Skull Bash", "Crunch");
-
-        Pokemon[] poke = new Pokemon[] {Chimchar, Bulbasaur, Squirtle};
+        Pokemon Pikachu = new Pokemon("Pikachu", "electric", 120, 0, "Thunderbolt", "Electro Ball", "Volt Tackle", "Thunder");
+        
+        Pokemon[] poke = new Pokemon[] {Chimchar, Bulbasaur, Squirtle, Pikachu};
         
         System.out.println(ANSI_GREEN);
         
@@ -83,15 +84,15 @@ public class App {
                                                + ANSI_RESET);
         }
         
-        System.out.println(ANSI_RESET + ANSI_GREEN);
+        System.out.println(ANSI_RESET + ANSI_PURPLE);
 
         while (yourPoke.getHealth() > 0.0 && opponentPoke.getHealth() > 0.0) {
             
-            System.out.println(yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
+            System.out.println(ANSI_BLUE + yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
             System.out.println("The foe's " + opponentPoke.getName() + " has " + opponentPoke.getHealth() + " health left.\n");
 
-            System.out.println(yourPoke.getName() + " knows " + yourPoke.getMove1() + ", " + yourPoke.getMove2() + ", "
-                               + yourPoke.getMove3() + ", " + yourPoke.getMove4());
+            System.out.println(yourPoke.getName() + " knows\n1 - " + yourPoke.getMove1() + "\t2 - " + yourPoke.getMove2() + "\n3 - "
+                               + yourPoke.getMove3() + "\t4 - " + yourPoke.getMove4() + ANSI_GREEN);
             System.out.println("Type the number corresponding to the move you would like " + yourPoke.getName() + " to use. Select '5' to switch out to a different Pokemon.\n>>");
             yourPoke.setUsedMove(s.nextInt());
             

@@ -174,6 +174,11 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
             yourTypeBonus = 1.0;
             opponentTypeBonus = 1.0;
 
+        } else {
+            
+            yourTypeBonus = 1.0;
+            opponentTypeBonus = 1.0;
+            
         }
 
         //TODO end type checking block
