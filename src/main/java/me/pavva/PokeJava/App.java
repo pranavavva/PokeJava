@@ -34,13 +34,13 @@ public class App {
         Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
         Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Aqua Jet", "Hydro Cannon", "Skull Bash", "Crunch");
         Pokemon Pikachu = new Pokemon("Pikachu", "electric", 120, 0, "Thunderbolt", "Electro Ball", "Volt Tackle", "Thunder");
-        
-        Pokemon[] poke = new Pokemon[] {Chimchar, Bulbasaur, Squirtle, Pikachu};
-        
+
+        Pokemon[] poke = new Pokemon[]{Chimchar, Bulbasaur, Squirtle, Pikachu};
+
         System.out.println(ANSI_GREEN);
-        
+
         for (int i = 0; i < poke.length; i++) {
-            
+
             System.out.println(poke[i].getName() + " is of type " + poke[i].getType() + ". It has " + poke[i].getHealth()
                                + " health points and it knows " + poke[i].getMove1() + ", " + poke[i].getMove2() + ", "
                                + poke[i].getMove3() + ", " + poke[i].getMove4() + ".");
@@ -53,37 +53,38 @@ public class App {
 
         Pokemon yourPoke = new Pokemon();
         Pokemon opponentPoke = new Pokemon();
-        
+
         System.out.println(ANSI_BLUE);
-       
-       if (yourPick < poke.length && yourPick > poke.length) {
-                      
+
+        if (yourPick < poke.length && yourPick > poke.length) {
+
             yourPoke = poke[yourPick - 1];
             opponentPoke = poke[opponentPick];
             System.out.println("You have selected " + yourPoke.getName());
             System.out.println("Your opponent has selected " + opponentPoke.getName());
-       
-       } else {
-           
+
+        } else {
+
             s.close();
             System.gc();
-            throw new IllegalArgumentException("\n\n" + ANSI_RESET + ANSI_RED + "Please pick an integer between 1 and " + poke.length + ", inclusive.\n"
-                                               + ANSI_RESET);
-       }
-        
+            throw new IllegalArgumentException("\n\n" + ANSI_RESET + ANSI_RED + "Please pick an integer between 1 and " + poke.length
+                                               + ", inclusive.\n" + ANSI_RESET);
+        }
+
         System.out.println(ANSI_RESET + ANSI_PURPLE);
 
         while (yourPoke.getHealth() > 0.0 && opponentPoke.getHealth() > 0.0) {
-            
+
             System.out.println(ANSI_BLUE + yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
             System.out.println("The foe's " + opponentPoke.getName() + " has " + opponentPoke.getHealth() + " health left.\n");
 
             System.out.println(yourPoke.getName() + " knows\n1 - " + yourPoke.getMove1() + "\t2 - " + yourPoke.getMove2() + "\n3 - "
                                + yourPoke.getMove3() + "\t4 - " + yourPoke.getMove4() + ANSI_GREEN);
-            System.out.print("Type the number corresponding to the move you would like " + yourPoke.getName() + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
+            System.out.print("Type the number corresponding to the move you would like " + yourPoke.getName()
+                             + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
             yourPoke.setUsedMove(s.nextInt());
-            
-            
+
+
             if (yourPoke.getUsedMove() == 1) {
 
                 Pokemon.Attack(yourPoke, opponentPoke, 0.0, 20.0);
@@ -103,29 +104,29 @@ public class App {
 
                 Pokemon.Attack(yourPoke, opponentPoke, 10, 30);
                 System.out.println(yourPoke.getName() + " used " + yourPoke.getMove4());
-                
+
             } else if (yourPoke.getUsedMove() == 5) {
-                
+
                 for (int j = 0; j < poke.length; j++) {
 
                     System.out.println(poke[j].getName() + " is of type " + poke[j].getType() + ". It has " + poke[j].getHealth()
-                        + " health points and it knows " + poke[j].getMove1() + ", " + poke[j].getMove2() + ", "
-                        + poke[j].getMove3() + ", " + poke[j].getMove4() + ".");
-                    
+                                       + " health points and it knows " + poke[j].getMove1() + ", " + poke[j].getMove2() + ", "
+                                       + poke[j].getMove3() + ", " + poke[j].getMove4() + ".");
+
                 }
-                
+
                 System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
                 yourPick = s.nextInt();
                 yourPoke = poke[yourPick - 1];
-                
+
             } else {
-                
+
                 System.gc();
                 s.close();
                 throw new IllegalArgumentException(ANSI_RED + "Please enter a number between 1 and 4, inclusive" + ANSI_RESET);
 
             }
-            
+
             opponentPoke.setUsedMove(rand.nextInt(4));
 
             if (opponentPoke.getUsedMove() == 1) {
@@ -151,13 +152,13 @@ public class App {
             }
 
             if (yourPoke.getHealth() < 0.0 && opponentPoke.getHealth() > 0.0) {
-                
+
                 System.out.println("Sorry, but your opponent won.");
                 System.out.println(yourPoke.getName() + " has fainted.");
                 System.out.println(opponentPoke.getName() + " has " + opponentPoke.getHealth() + " health left.");
 
             } else if (yourPoke.getHealth() > 0.0 && opponentPoke.getHealth() < 0.0) {
-                
+
                 System.out.println("Congratulations! You won!");
                 System.out.println("The foe's " + opponentPoke.getName() + " has fainted.");
                 System.out.println(yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
@@ -167,7 +168,7 @@ public class App {
 
         }
 
-		System.gc();
+        System.gc();
         s.close();
 
     }

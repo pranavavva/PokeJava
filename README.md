@@ -22,6 +22,7 @@ This project is licensed under the MIT License. It is free to use by anyone.
 # Project Tree
 ```
 .
+├── LICENSE
 ├── pom.xml
 ├── README.md
 ├── src
@@ -37,7 +38,8 @@ This project is licensed under the MIT License. It is free to use by anyone.
 │           └── me
 │               └── pavva
 │                   └── PokeJava
-│                       └── AppTest.java
+│                       ├── AppTest.java
+│                       └── PokemonTest.java
 └── target
     ├── classes
     │   └── me
@@ -45,6 +47,8 @@ This project is licensed under the MIT License. It is free to use by anyone.
     │           └── PokeJava
     │               ├── App.class
     │               └── Pokemon.class
+    ├── coveralls.json
+    ├── jacoco.exec
     ├── maven-status
     │   └── maven-compiler-plugin
     │       ├── compile
@@ -55,15 +59,27 @@ This project is licensed under the MIT License. It is free to use by anyone.
     │           └── default-testCompile
     │               ├── createdFiles.lst
     │               └── inputFiles.lst
-    ├── PokeJavaApp-1.0.jar
+    ├── site
+    │   └── jacoco
+    │       ├── index.html
+    │       ├── jacoco.csv
+    │       ├── jacoco.xml
+    │       └── me.pavva.PokeJava
+    │           ├── App.html
+    │           ├── App.java.html
+    │           ├── index.html
+    │           ├── index.source.html
+    │           ├── Pokemon.html
+    │           └── Pokemon.java.html
     ├── surefire-reports
-    │   ├── me.pavva.PokeJava.AppTest.txt
-    │   └── TEST-me.pavva.PokeJava.AppTest.xml
+    │   ├── me.pavva.PokeJava.PokemonTest.txt
+    │   └── TEST-me.pavva.PokeJava.PokemonTest.xml
     └── test-classes
         └── me
             └── pavva
                 └── PokeJava
-                    └── AppTest.class
+                    ├── AppTest.class
+                    └── PokemonTest.class
 
-27 directories, 15 files
+30 directories, 28 files
 ```
