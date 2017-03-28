@@ -47,7 +47,7 @@ public class App {
 
         }
 
-        System.out.println("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>>");
+        System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
         int yourPick = s.nextInt();
         int opponentPick = rand.nextInt(poke.length);
 
@@ -77,6 +77,13 @@ public class App {
             System.out.println("You have selected " + yourPoke.getName());
             System.out.println("Your opponent has selected " + opponentPoke.getName());
 
+        } else if (yourPick == 4) {
+
+            yourPoke = poke[yourPick - 1];
+            opponentPoke = poke[opponentPick];
+            System.out.println("You have selected " + yourPoke.getName());
+            System.out.println("Your opponent has selected " + opponentPoke.getName());
+
         } else if (yourPick > poke.length || yourPick < poke.length) {
             s.close();
             System.gc();
@@ -93,7 +100,7 @@ public class App {
 
             System.out.println(yourPoke.getName() + " knows\n1 - " + yourPoke.getMove1() + "\t2 - " + yourPoke.getMove2() + "\n3 - "
                                + yourPoke.getMove3() + "\t4 - " + yourPoke.getMove4() + ANSI_GREEN);
-            System.out.println("Type the number corresponding to the move you would like " + yourPoke.getName() + " to use. Select '5' to switch out to a different Pokemon.\n>>");
+            System.out.print("Type the number corresponding to the move you would like " + yourPoke.getName() + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
             yourPoke.setUsedMove(s.nextInt());
             
             
@@ -127,7 +134,7 @@ public class App {
                     
                 }
                 
-                System.out.println("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>>");
+                System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
                 yourPick = s.nextInt();
                 yourPoke = poke[yourPick - 1];
                 

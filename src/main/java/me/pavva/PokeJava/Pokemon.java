@@ -149,6 +149,11 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
             yourTypeBonus = 0.5;
             opponentTypeBonus = 2.0;
 
+        } else if (your.getType() == "water" && opponent.getType() == "electric") {
+
+            yourTypeBonus = 0.5;
+            opponentTypeBonus = 2.0;
+
         } else if (your.getType() == "fire" && opponent.getType() == "water") {
 
             yourTypeBonus = 0.5;
@@ -169,16 +174,21 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
             yourTypeBonus = 0.5;
             opponentTypeBonus = 2.0;
 
+        } else if (your.getType() == "electric" && opponent.getType() == "water") {
+
+            yourTypeBonus = 2.0;
+            opponentTypeBonus = 0.5;
+
         } else if (your.getType() == opponent.getType()) { //In the event both Pokemon are of the same type
 
+            yourTypeBonus = 0.5;
+            opponentTypeBonus = 0.5;
+
+        } else {
+
             yourTypeBonus = 1.0;
             opponentTypeBonus = 1.0;
 
-        } else {
-            
-            yourTypeBonus = 1.0;
-            opponentTypeBonus = 1.0;
-            
         }
 
         //TODO end type checking block
