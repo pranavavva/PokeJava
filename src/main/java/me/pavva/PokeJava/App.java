@@ -55,41 +55,21 @@ public class App {
         Pokemon opponentPoke = new Pokemon();
         
         System.out.println(ANSI_BLUE);
-        
-        if (yourPick == 1) {
-
+       
+       if (yourPick < poke.length && yourPick > poke.length) {
+                      
             yourPoke = poke[yourPick - 1];
             opponentPoke = poke[opponentPick];
             System.out.println("You have selected " + yourPoke.getName());
             System.out.println("Your opponent has selected " + opponentPoke.getName());
-
-        } else if (yourPick == 2) {
-
-            yourPoke = poke[yourPick - 1];
-            opponentPoke = poke[opponentPick];
-            System.out.println("You have selected " + yourPoke.getName());
-            System.out.println("Your opponent has selected " + opponentPoke.getName());
-
-        } else if (yourPick == 3) {
-
-            yourPoke = poke[yourPick - 1];
-            opponentPoke = poke[opponentPick];
-            System.out.println("You have selected " + yourPoke.getName());
-            System.out.println("Your opponent has selected " + opponentPoke.getName());
-
-        } else if (yourPick == 4) {
-
-            yourPoke = poke[yourPick - 1];
-            opponentPoke = poke[opponentPick];
-            System.out.println("You have selected " + yourPoke.getName());
-            System.out.println("Your opponent has selected " + opponentPoke.getName());
-
-        } else if (yourPick > poke.length || yourPick < poke.length) {
+       
+       } else {
+           
             s.close();
             System.gc();
             throw new IllegalArgumentException("\n\n" + ANSI_RESET + ANSI_RED + "Please pick an integer between 1 and " + poke.length + ", inclusive.\n"
                                                + ANSI_RESET);
-        }
+       }
         
         System.out.println(ANSI_RESET + ANSI_PURPLE);
 
