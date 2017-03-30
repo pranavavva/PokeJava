@@ -1,5 +1,12 @@
 package me.pavva.PokeJava;
-
+/**
+ * Filename: me.pavva.PokeJava.Pokemon
+ * 
+ * The class file which contains the constructor, get-set methods, and damage calculation function for pokemon
+ * 
+ * @author  Pranav A.   Github: 20avva
+ * @version 1.0
+ */
 public class Pokemon { //Pokemon Object Constructors and get-set methods
 
     private String name;
@@ -11,6 +18,21 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     private String move3;
     private String move4;
 
+    /**
+     * Pokemon object constuctor with optional params passed in
+     * 
+     * @param   String  pokemon_name        The name of the created pokemon as reffered to by the user
+     * @param   String  pokemon_type        The type of the pokemon, used in damage calculation
+     * @param   double  pokemon_health      The health of the pokemon, used in damage calculation
+     * @param   int     pokemon_used_move   The move a pokemon used, used by move checking
+     * @param   String  pokemon_move1       The name of the first move a pokemon can use, reffered to by the user
+     * @param   String  pokemon_move2       The name of the second move a pokemon can use, reffered to by the user
+     * @param   String  pokemon_move3       The name of the third move a pokemon can use, reffered to by the user
+     * @param   String  pokemon_move4       The name of the fourth move a pokemon can use, reffered to by the user
+     * 
+     * @see     Pokemon.Pokemon()
+     * @see     Pokemon.Attack(Pokemon, Pokemon, double, double)
+     */
     public Pokemon(String pokemon_name,
                    String pokemon_type,
                    double pokemon_health,
@@ -31,6 +53,11 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
     }
 
+    /**
+     * Default pokemon object constructor, no params passed in
+     * 
+     * @see Pokemon.Pokemon(String, String, double, int, String, String, String, String)
+     */
     public Pokemon() {
         this.name = null;
         this.type = null;
@@ -42,86 +69,177 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
         this.move4 = null;
     }
 
+    /**
+     * Sets the name of a pokemon object
+     * 
+     * @param   String  name    The new name of the pokemon
+     */
     public void setName(String name) {
 
         this.name = name;
     }
 
+    /**
+     * Sets the new type of a pokemon
+     * 
+     * @param   String  type    The new type of the pokemon
+     */
     public void setType(String type) {
 
         this.type = type;
     }
 
+    /**
+     * Sets the new health value of a pokemon
+     * 
+     * @param   double  health  The new health of a pokemon
+     * @see     Pokemon.Attack(Pokemon, Pokemon, double, double)
+     */
     public void setHealth(double health) {
 
         this.health = health;
     }
 
+    /**
+     * Sets the usedMove of a pokemon
+     * 
+     * @param   int usedMove    The used to be moved in the next damage checking turn
+     * @see     App.main(String[] args)
+     */
     public void setUsedMove(int usedMove) {
 
         this.usedMove = usedMove;
     }
 
+    /**
+     * Sets the first move of a pokemon
+     * 
+     * @param   String  move1   The new move name, seen only by the user
+     */
     public void setMove1(String move1) {
 
         this.move1 = move1;
     }
 
+    /**
+     * Sets the second move of a pokemon
+     * 
+     * @param   String  move2   The new move name, seen only by the user
+     */
     public void setMove2(String move2) {
 
         this.move2 = move2;
     }
 
+    /**
+     * Sets the third move of a pokemon
+     * 
+     * @param   String  move3   The new move name, seen only by the user
+     */
     public void setMove3(String move3) {
 
         this.move3 = move3;
     }
 
+    /**
+     * Sets the fourth move of a pokemon
+     * 
+     * @param   String  move4   The new move name, seen only by the user
+     */
     public void setMove4(String move4) {
 
         this.move4 = move4;
     }
 
+    /**
+     * Returns the name of the pokemon
+     * 
+     * @return  String  name    The name of the pokemon
+     */
     public String getName() {
 
         return this.name;
     }
 
+    /**
+     * Returns the type of the pokemon
+     * 
+     * @return  String  type    The type of the pokemon
+     */
     public String getType() {
 
         return this.type;
     }
 
+    /**
+     * Returns the current health of the pokemon
+     * 
+     * @return  double  health  The health of the pokemon
+     */
     public double getHealth() {
 
         return this.health;
     }
 
+    /**
+     * Returns the used move of the pokemon
+     * 
+     * @return  int usedMove    The used move of the pokemon
+     */
     public int getUsedMove() {
 
         return this.usedMove;
     }
 
+    /**
+     * Returns the first move of the pokemon
+     * 
+     * @return  String  move1   The first move of the pokemon
+     */
     public String getMove1() {
 
         return this.move1;
     }
 
+    /**
+     * Returns the second move of the pokemon
+     * 
+     * @return  String  move2   The second move of the pokemon
+     */
     public String getMove2() {
 
         return this.move2;
     }
 
+    /**
+     * Returns the third move of the pokemon
+     * 
+     * @return  String  move3   The third move of the pokemon
+     */
     public String getMove3() {
 
         return this.move3;
     }
 
+    /**
+     * Returns the fourth move of the pokemon
+     * 
+     * @return  String  move4   The fourth move of the pokemon
+     */
     public String getMove4() {
 
         return this.move4;
     }
 
+    /**
+     * The main damage calculation step of the battle simulations.
+     * Takes into account type effectivity and returns damage based on it
+     * 
+     * @param   Pokemon     your            The pokemon which is controlled by the user
+     * @param   Pokemon     oppponent       The pokemon which is controlled by the CPU
+     * @param   double      yourDamage      The unmodified damage yourPoke recieves
+     * @param   double      opponentDamage  The unmodified damage opponentPoke recieves
+     */
     public static void Attack(Pokemon your, Pokemon opponent, double yourDamage, double opponentDamage) {
 
         /*
@@ -131,8 +249,8 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
          * opponentDamage refers to the unmodified damage opponentPoke gets
          */
 
-        double yourTypeBonus = 0.0; // Initializing type bonus variables
-        double opponentTypeBonus = 0.0;
+        double yourTypeBonus; // Initializing type bonus variables
+        double opponentTypeBonus;
 
         //Type Checking
         //This system uses a permutation system to cover all possible events

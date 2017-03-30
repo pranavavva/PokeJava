@@ -40,4 +40,23 @@ public class PokemonTest {
         Assert.assertEquals(pokemon.getMove3(), "move3");
         Assert.assertEquals(pokemon.getMove4(), "move4");
     }
+    
+    @Test
+    public void testAttackFireGrass() {
+        
+        Pokemon Chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        
+        Pokemon.Attack(Chimchar, Bulbasaur, 0, 50);
+        Assert.assertEquals(20, Bulbasaur.getHealth(), 1);
+    }
+    
+    @Test
+    public void testAttackGrassFire() {
+        Pokemon Chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        
+        Pokemon.Attack(Bulbasaur, Chimchar, 0, 50);
+        Assert.assertEquals(95.0, Chimchar.getHealth(), 1);
+    }
 }
