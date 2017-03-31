@@ -3,6 +3,15 @@ package me.pavva.PokeJava;
 import java.util.Scanner; //User input
 import java.util.Random; //Random numbers
 
+/**
+ * me.pavva.PokeJava.App
+ * 
+ * Entry point to Pokemon Battle Simulator
+ * 
+ * @author  Pranav A.   Github: 20avva
+ * @version 1.0
+ * @see me.pavva.PokeJava.Pokemon
+ */
 public class App {
 
     @SuppressWarnings("unused")
