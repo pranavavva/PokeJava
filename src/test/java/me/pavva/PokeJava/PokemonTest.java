@@ -8,6 +8,7 @@ public class PokemonTest {
     @Test //Convert Each one of these assertations into their own test methods
     public void testSetMethods() {
         Pokemon pokemon = new Pokemon();
+        
         pokemon.setName("name");
         pokemon.setType("type");
         pokemon.setHealth(120.0);
@@ -58,5 +59,45 @@ public class PokemonTest {
         
         Pokemon.Attack(Bulbasaur, Chimchar, 0, 50);
         Assert.assertEquals(95.0, Chimchar.getHealth(), 1);
+    }
+    
+    @Test
+    public void testAttackFireWater() {
+        
+        Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon Chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        
+        Pokemon.Attack(Chimchar, Squirtle, 0, 50);
+        Assert.assertEquals(95, Squirtle.getHealth(), 1);
+    }
+    
+    @Test
+    public void testAttackWaterFire() {
+        
+        Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon Chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        
+        Pokemon.Attack(Squirtle, Chimchar, 0, 50);
+        Assert.assertEquals(20, Chimchar.getHealth(), 1);
+    }
+    
+    @Test
+    public void testAttckGrassWater() {
+        
+        Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        
+        Pokemon.Attack(Bulbasaur, Squirtle, 0, 50);
+        Assert.assertEquals(20, Squirtle.getHealth(), 1);
+    }
+    
+    @Test
+    public void testAttckWaterGrass() {
+        
+        Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        
+        Pokemon.Attack(Squirtle, Bulbasaur, 0, 50);
+        Assert.assertEquals(95, Bulbasaur.getHealth(), 1);
     }
 }

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PokeJavaApp</a> &gt; <a href="index.source.html" class="el_package">me.pavva.PokeJava</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package me.pavva.PokeJava;
+
+import java.util.Scanner; //User input
+import java.util.Random; //Random numbers
+
+/**
+ * me.pavva.PokeJava.App
+ * 
+ * Entry point to Pokemon Battle Simulator
+ * 
+ * @author  Pranav A.   Github: 20avva
+ * @version 1.0
+ * @see me.pavva.PokeJava.Pokemon
+ */
+<span class="nc" id="L15">public class App {</span>
+
+    @SuppressWarnings(&quot;unused&quot;)
+    public static void main(String[] args) throws IllegalArgumentException {
+
+<span class="nc" id="L20">        final String ANSI_RESET = &quot;\u001B[0m&quot;; //ANSI Color Codes</span>
+<span class="nc" id="L21">        final String ANSI_BLACK = &quot;\u001B[30m&quot;;</span>
+<span class="nc" id="L22">        final String ANSI_RED = &quot;\u001B[31m&quot;;</span>
+<span class="nc" id="L23">        final String ANSI_GREEN = &quot;\u001B[32m&quot;;</span>
+<span class="nc" id="L24">        final String ANSI_YELLOW = &quot;\u001B[33m&quot;;</span>
+<span class="nc" id="L25">        final String ANSI_BLUE = &quot;\u001B[34m&quot;;</span>
+<span class="nc" id="L26">        final String ANSI_PURPLE = &quot;\u001B[35m&quot;;</span>
+<span class="nc" id="L27">        final String ANSI_CYAN = &quot;\u001B[36m&quot;;</span>
+<span class="nc" id="L28">        final String ANSI_WHITE = &quot;\u001B[37m&quot;;</span>
+
+<span class="nc" id="L30">        final String ANSI_BLACK_BACKGROUND = &quot;\u001B[40m&quot;; //ANSI Background Color Codes</span>
+<span class="nc" id="L31">        final String ANSI_RED_BACKGROUND = &quot;\u001B[41m&quot;;</span>
+<span class="nc" id="L32">        final String ANSI_GREEN_BACKGROUND = &quot;\u001B[42m&quot;;</span>
+<span class="nc" id="L33">        final String ANSI_YELLOW_BACKGROUND = &quot;\u001B[43m&quot;;</span>
+<span class="nc" id="L34">        final String ANSI_BLUE_BACKGROUND = &quot;\u001B[44m&quot;;</span>
+<span class="nc" id="L35">        final String ANSI_PURPLE_BACKGROUND = &quot;\u001B[45m&quot;;</span>
+<span class="nc" id="L36">        final String ANSI_CYAN_BACKGROUND = &quot;\u001B[46m&quot;;</span>
+<span class="nc" id="L37">        final String ANSI_WHITE_BACKGROUND = &quot;\u001B[47m&quot;;</span>
+
+<span class="nc" id="L39">        Scanner s = new Scanner(System.in); //Used for User Input</span>
+<span class="nc" id="L40">        Random rand = new Random(); //Random Numbers</span>
+
+<span class="nc" id="L42">        Pokemon charmander = new Pokemon(&quot;Charmander&quot;, &quot;fire&quot;, 120, 0, &quot;Flamethrower&quot;, &quot;Flame Charge&quot;, &quot;Tackle&quot;, &quot;Skull Bash&quot;);</span>
+<span class="nc" id="L43">        Pokemon bulbausar = new Pokemon(&quot;Bulbasaur&quot;, &quot;grass&quot;, 120, 0, &quot;Energy Ball&quot;, &quot;Solar Ball&quot;, &quot;Vine Whip&quot;, &quot;Tackle&quot;);</span>
+<span class="nc" id="L44">        Pokemon squirtle = new Pokemon(&quot;Squirtle&quot;, &quot;water&quot;, 120, 0, &quot;Aqua Jet&quot;, &quot;Hydro Cannon&quot;, &quot;Skull Bash&quot;, &quot;Crunch&quot;);</span>
+<span class="nc" id="L45">        Pokemon pikachu = new Pokemon(&quot;Pikachu&quot;, &quot;electric&quot;, 120, 0, &quot;Thunderbolt&quot;, &quot;Electro Ball&quot;, &quot;Volt Tackle&quot;, &quot;Thunder&quot;);</span>
+<span class="nc" id="L46">        Pokemon chimchar = new Pokemon(&quot;Chimchar&quot;, &quot;fire&quot;, 120, 0, &quot;Fire Ball&quot;, &quot;Overheat&quot;, &quot;Heat Crash&quot;, &quot;Tail Whip&quot;);</span>
+<span class="nc" id="L47">        Pokemon turtwig = new Pokemon(&quot;Turtwig&quot;, &quot;grass&quot;, 120, 0, &quot;Tackle&quot;, &quot;Razor Leaf&quot;, &quot;Energy Ball&quot;, &quot;Hidden Power&quot;);</span>
+<span class="nc" id="L48">        Pokemon piplup = new Pokemon(&quot;Piplup&quot;, &quot;water&quot;, 120, 0, &quot;Bubble Beam&quot;, &quot;Water Gun&quot;, &quot;Aqua Jet&quot;, &quot;Brine&quot;);</span>
+
+<span class="nc" id="L50">        Pokemon[] poke = new Pokemon[]{charmander, bulbausar, squirtle, pikachu, chimchar, turtwig, piplup};</span>
+
+<span class="nc" id="L52">        System.out.println(ANSI_GREEN);</span>
+
+        
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        for (Pokemon p : poke) {</span>
+            
+<span class="nc" id="L57">            System.out.print(p.getName() + &quot; is of type &quot; + p.getType() + &quot;. It has &quot; + p.getHealth()</span>
+<span class="nc" id="L58">                + &quot; health points and it knows &quot; + p.getMove1() + &quot;, &quot; + p.getMove2() + &quot;, &quot;</span>
+<span class="nc" id="L59">                + p.getMove3() + &quot;, &quot; + p.getMove4() + &quot;.\n&quot;);</span>
+        }
+
+
+<span class="nc" id="L63">        System.out.print(&quot;\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n&gt;&gt; &quot;);</span>
+<span class="nc" id="L64">        int yourPick = s.nextInt();</span>
+<span class="nc" id="L65">        int opponentPick = rand.nextInt(poke.length);</span>
+
+<span class="nc" id="L67">        Pokemon yourPoke = new Pokemon();</span>
+<span class="nc" id="L68">        Pokemon opponentPoke = new Pokemon();</span>
+
+<span class="nc" id="L70">        System.out.println(ANSI_BLUE);</span>
+
+<span class="nc bnc" id="L72" title="All 4 branches missed.">        if (yourPick &lt; poke.length &amp;&amp; yourPick &gt; 0) {</span>
+
+<span class="nc" id="L74">            yourPoke = poke[yourPick - 1];</span>
+<span class="nc" id="L75">            opponentPoke = poke[opponentPick];</span>
+<span class="nc" id="L76">            System.out.println(&quot;You have selected &quot; + yourPoke.getName());</span>
+<span class="nc" id="L77">            System.out.println(&quot;Your opponent has selected &quot; + opponentPoke.getName());</span>
+
+        } else {
+
+<span class="nc" id="L81">            s.close();</span>
+<span class="nc" id="L82">            System.gc();</span>
+<span class="nc" id="L83">            throw new IllegalArgumentException(&quot;\n\n&quot; + ANSI_RESET + ANSI_RED + &quot;Please pick an integer between 1 and &quot; + poke.length</span>
+                                               + &quot;, inclusive.\n&quot; + ANSI_RESET);
+        }
+
+<span class="nc" id="L87">        System.out.println(ANSI_RESET + ANSI_PURPLE);</span>
+
+<span class="nc bnc" id="L89" title="All 4 branches missed.">        while (yourPoke.getHealth() &gt; 0.0 &amp;&amp; opponentPoke.getHealth() &gt; 0.0) {</span>
+
+<span class="nc" id="L91">            System.out.println(ANSI_BLUE + yourPoke.getName() + &quot; has &quot; + yourPoke.getHealth() + &quot; health left.&quot;);</span>
+<span class="nc" id="L92">            System.out.println(&quot;The foe's &quot; + opponentPoke.getName() + &quot; has &quot; + opponentPoke.getHealth() + &quot; health left.\n&quot;);</span>
+
+<span class="nc" id="L94">            System.out.println(yourPoke.getName() + &quot; knows\n1 - &quot; + yourPoke.getMove1() + &quot;\t2 - &quot; + yourPoke.getMove2() + &quot;\n3 - &quot;</span>
+<span class="nc" id="L95">                               + yourPoke.getMove3() + &quot;\t4 - &quot; + yourPoke.getMove4() + ANSI_GREEN);</span>
+<span class="nc" id="L96">            System.out.print(&quot;Type the number corresponding to the move you would like &quot; + yourPoke.getName()</span>
+                             + &quot; to use. Select '5' to switch out to a different Pokemon.\n&gt;&gt; &quot;);
+<span class="nc" id="L98">            yourPoke.setUsedMove(s.nextInt());</span>
+
+
+<span class="nc bnc" id="L101" title="All 2 branches missed.">            if (yourPoke.getUsedMove() == 1) {</span>
+
+<span class="nc" id="L103">                Pokemon.Attack(yourPoke, opponentPoke, 0.0, 20.0);</span>
+<span class="nc" id="L104">                System.out.println(yourPoke.getName() + &quot; used &quot; + yourPoke.getMove1());</span>
+
+<span class="nc bnc" id="L106" title="All 2 branches missed.">            } else if (yourPoke.getUsedMove() == 2) {</span>
+
+<span class="nc" id="L108">                Pokemon.Attack(yourPoke, opponentPoke, 0.0, 18.0);</span>
+<span class="nc" id="L109">                System.out.println(yourPoke.getName() + &quot; used &quot; + yourPoke.getMove2());</span>
+
+<span class="nc bnc" id="L111" title="All 2 branches missed.">            } else if (yourPoke.getUsedMove() == 3) {</span>
+
+<span class="nc" id="L113">                Pokemon.Attack(yourPoke, opponentPoke, 5, 25);</span>
+<span class="nc" id="L114">                System.out.println(yourPoke.getName() + &quot; used &quot; + yourPoke.getMove3());</span>
+
+<span class="nc bnc" id="L116" title="All 2 branches missed.">            } else if (yourPoke.getUsedMove() == 4) {</span>
+
+<span class="nc" id="L118">                Pokemon.Attack(yourPoke, opponentPoke, 10, 30);</span>
+<span class="nc" id="L119">                System.out.println(yourPoke.getName() + &quot; used &quot; + yourPoke.getMove4());</span>
+
+<span class="nc bnc" id="L121" title="All 2 branches missed.">            } else if (yourPoke.getUsedMove() == 5) {</span>
+
+<span class="nc bnc" id="L123" title="All 2 branches missed.">                for (int j = 0; j &lt; poke.length; j++) {</span>
+
+<span class="nc" id="L125">                    System.out.println(poke[j].getName() + &quot; is of type &quot; + poke[j].getType() + &quot;. It has &quot; + poke[j].getHealth()</span>
+<span class="nc" id="L126">                                       + &quot; health points and it knows &quot; + poke[j].getMove1() + &quot;, &quot; + poke[j].getMove2() + &quot;, &quot;</span>
+<span class="nc" id="L127">                                       + poke[j].getMove3() + &quot;, &quot; + poke[j].getMove4() + &quot;.&quot;);</span>
+
+                }
+
+<span class="nc" id="L131">                System.out.print(&quot;\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n&gt;&gt; &quot;);</span>
+<span class="nc" id="L132">                yourPick = s.nextInt();</span>
+<span class="nc" id="L133">                yourPoke = poke[yourPick - 1];</span>
+
+            } else {
+
+<span class="nc" id="L137">                System.gc();</span>
+<span class="nc" id="L138">                s.close();</span>
+<span class="nc" id="L139">                throw new IllegalArgumentException(ANSI_RED + &quot;Please enter a number between 1 and 4, inclusive&quot; + ANSI_RESET);</span>
+
+            }
+
+<span class="nc" id="L143">            opponentPoke.setUsedMove(rand.nextInt(4));</span>
+
+<span class="nc bnc" id="L145" title="All 2 branches missed.">            if (opponentPoke.getUsedMove() == 1) {</span>
+
+<span class="nc" id="L147">                Pokemon.Attack(yourPoke, opponentPoke, 10.0, 0.0);</span>
+<span class="nc" id="L148">                System.out.println(&quot;The foe's &quot; + opponentPoke.getName() + &quot; used &quot; + opponentPoke.getMove1() + &quot;\n&quot;);</span>
+
+<span class="nc bnc" id="L150" title="All 2 branches missed.">            } else if (opponentPoke.getUsedMove() == 2) {</span>
+
+<span class="nc" id="L152">                Pokemon.Attack(yourPoke, opponentPoke, 18.0, 0.0);</span>
+<span class="nc" id="L153">                System.out.println(&quot;The foe's &quot; + opponentPoke.getName() + &quot; used &quot; + opponentPoke.getMove2() + &quot;\n&quot;);</span>
+
+<span class="nc bnc" id="L155" title="All 2 branches missed.">            } else if (opponentPoke.getUsedMove() == 3) {</span>
+
+<span class="nc" id="L157">                Pokemon.Attack(yourPoke, opponentPoke, 25.0, 5.0);</span>
+<span class="nc" id="L158">                System.out.println(&quot;The foe's &quot; + opponentPoke.getName() + &quot; used &quot; + opponentPoke.getMove3() + &quot;\n&quot;);</span>
+
+<span class="nc bnc" id="L160" title="All 2 branches missed.">            } else if (opponentPoke.getUsedMove() == 4) {</span>
+
+<span class="nc" id="L162">                Pokemon.Attack(yourPoke, opponentPoke, 30.0, 10.0);</span>
+<span class="nc" id="L163">                System.out.println(&quot;The foe's &quot; + opponentPoke.getName() + &quot; used &quot; + opponentPoke.getMove4() + &quot;\n&quot;);</span>
+
+            }
+
+<span class="nc bnc" id="L167" title="All 4 branches missed.">            if (yourPoke.getHealth() &lt; 0.0 &amp;&amp; opponentPoke.getHealth() &gt; 0.0) {</span>
+
+<span class="nc" id="L169">                System.out.println(&quot;Sorry, but your opponent won.&quot;);</span>
+<span class="nc" id="L170">                System.out.println(yourPoke.getName() + &quot; has fainted.&quot;);</span>
+<span class="nc" id="L171">                System.out.println(opponentPoke.getName() + &quot; has &quot; + opponentPoke.getHealth() + &quot; health left.&quot;);</span>
+
+<span class="nc bnc" id="L173" title="All 4 branches missed.">            } else if (yourPoke.getHealth() &gt; 0.0 &amp;&amp; opponentPoke.getHealth() &lt; 0.0) {</span>
+
+<span class="nc" id="L175">                System.out.println(&quot;Congratulations! You won!&quot;);</span>
+<span class="nc" id="L176">                System.out.println(&quot;The foe's &quot; + opponentPoke.getName() + &quot; has fainted.&quot;);</span>
+<span class="nc" id="L177">                System.out.println(yourPoke.getName() + &quot; has &quot; + yourPoke.getHealth() + &quot; health left.&quot;);</span>
+
+            }
+
+
+        }
+
+<span class="nc" id="L184">        System.gc();</span>
+<span class="nc" id="L185">        s.close();</span>
+
+<span class="nc" id="L187">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

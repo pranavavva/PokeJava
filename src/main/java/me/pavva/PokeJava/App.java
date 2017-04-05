@@ -39,22 +39,26 @@ public class App {
         Scanner s = new Scanner(System.in); //Used for User Input
         Random rand = new Random(); //Random Numbers
 
-        Pokemon Chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
-        Pokemon Bulbasaur = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
-        Pokemon Squirtle = new Pokemon("Squirtle", "water", 120, 0, "Aqua Jet", "Hydro Cannon", "Skull Bash", "Crunch");
-        Pokemon Pikachu = new Pokemon("Pikachu", "electric", 120, 0, "Thunderbolt", "Electro Ball", "Volt Tackle", "Thunder");
+        Pokemon charmander = new Pokemon("Charmander", "fire", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
+        Pokemon bulbausar = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
+        Pokemon squirtle = new Pokemon("Squirtle", "water", 120, 0, "Aqua Jet", "Hydro Cannon", "Skull Bash", "Crunch");
+        Pokemon pikachu = new Pokemon("Pikachu", "electric", 120, 0, "Thunderbolt", "Electro Ball", "Volt Tackle", "Thunder");
+        Pokemon chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Fire Ball", "Overheat", "Heat Crash", "Tail Whip");
+        Pokemon turtwig = new Pokemon("Turtwig", "grass", 120, 0, "Tackle", "Razor Leaf", "Energy Ball", "Hidden Power");
+        Pokemon piplup = new Pokemon("Piplup", "water", 120, 0, "Bubble Beam", "Water Gun", "Aqua Jet", "Brine");
 
-        Pokemon[] poke = new Pokemon[]{Chimchar, Bulbasaur, Squirtle, Pikachu};
+        Pokemon[] poke = new Pokemon[]{charmander, bulbausar, squirtle, pikachu, chimchar, turtwig, piplup};
 
         System.out.println(ANSI_GREEN);
 
-        for (int i = 0; i < poke.length; i++) {
-
-            System.out.println(poke[i].getName() + " is of type " + poke[i].getType() + ". It has " + poke[i].getHealth()
-                               + " health points and it knows " + poke[i].getMove1() + ", " + poke[i].getMove2() + ", "
-                               + poke[i].getMove3() + ", " + poke[i].getMove4() + ".");
-
+        
+        for (Pokemon p : poke) {
+            
+            System.out.print(p.getName() + " is of type " + p.getType() + ". It has " + p.getHealth()
+                + " health points and it knows " + p.getMove1() + ", " + p.getMove2() + ", "
+                + p.getMove3() + ", " + p.getMove4() + ".\n");
         }
+
 
         System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
         int yourPick = s.nextInt();
@@ -65,7 +69,7 @@ public class App {
 
         System.out.println(ANSI_BLUE);
 
-        if (yourPick < poke.length && yourPick > poke.length) {
+        if (yourPick < poke.length && yourPick > 0) {
 
             yourPoke = poke[yourPick - 1];
             opponentPoke = poke[opponentPick];
