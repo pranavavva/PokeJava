@@ -100,4 +100,6 @@ public class PokemonTest {
         Pokemon.Attack(Squirtle, Bulbasaur, 0, 50);
         Assert.assertEquals(95, Bulbasaur.getHealth(), 1);
     }
+    
+    //TODO finish the coverage of the Pokemon class
 }
