@@ -22,14 +22,14 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Pokemon object constuctor with optional params passed in
      * 
-     * @param   String  pokemon_name        -   The name of the created pokemon as reffered to by the user
-     * @param   String  pokemon_type        -   The type of the pokemon, used in damage calculation
-     * @param   double  pokemon_health      -   The health of the pokemon, used in damage calculation
-     * @param   int     pokemon_used_move   -   The move a pokemon used, used by move checking
-     * @param   String  pokemon_move1       -   The name of the first move a pokemon can use, reffered to by the user
-     * @param   String  pokemon_move2       -   The name of the second move a pokemon can use, reffered to by the user
-     * @param   String  pokemon_move3       -   The name of the third move a pokemon can use, reffered to by the user
-     * @param   String  pokemon_move4       -   The name of the fourth move a pokemon can use, reffered to by the user
+     * @param  pokemon_name        -   The name of the created pokemon as reffered to by the user
+     * @param  pokemon_type        -   The type of the pokemon, used in damage calculation
+     * @param  pokemon_health      -   The health of the pokemon, used in damage calculation
+     * @param  pokemon_used_move   -   The move a pokemon used, used by move checking
+     * @param  pokemon_move1       -   The name of the first move a pokemon can use, reffered to by the user
+     * @param  pokemon_move2       -   The name of the second move a pokemon can use, reffered to by the user
+     * @param  pokemon_move3       -   The name of the third move a pokemon can use, reffered to by the user
+     * @param  pokemon_move4       -   The name of the fourth move a pokemon can use, reffered to by the user
      * 
      * @see     Pokemon.Pokemon()
      * @see     Pokemon.Attack(Pokemon, Pokemon, double, double)
@@ -73,7 +73,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the name of a pokemon object
      * 
-     * @param   String  name    -   The new name of the pokemon
+     * @param   name    The new name of the pokemon
      */
     public void setName(String name) {
 
@@ -83,7 +83,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the new type of a pokemon
      * 
-     * @param   String  type    -   The new type of the pokemon
+     * @param  type     The new type of the pokemon
      */
     public void setType(String type) {
 
@@ -93,7 +93,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the new health value of a pokemon
      * 
-     * @param   double  health  -   The new health of a pokemon
+     * @param   health  The new health of a pokemon
      * @see     Pokemon.Attack(Pokemon, Pokemon, double, double)
      */
     public void setHealth(double health) {
@@ -104,7 +104,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the usedMove of a pokemon
      * 
-     * @param   int     usedMove    -   The used to be moved in the next damage checking turn
+     * @param   usedMove    The used to be moved in the next damage checking turn
      * @see     App.main(String[] args)
      */
     public void setUsedMove(int usedMove) {
@@ -115,7 +115,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the first move of a pokemon
      * 
-     * @param   String  move1   -   The new move name, seen only by the user
+     * @param   move1   The new move name, seen only by the user
      */
     public void setMove1(String move1) {
 
@@ -125,7 +125,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the second move of a pokemon
      * 
-     * @param   String  move2   -   The new move name, seen only by the user
+     * @param  move2   The new move name, seen only by the user
      */
     public void setMove2(String move2) {
 
@@ -135,7 +135,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the third move of a pokemon
      * 
-     * @param   String  move3   -   The new move name, seen only by the user
+     * @param  move3   The new move name, seen only by the user
      */
     public void setMove3(String move3) {
 
@@ -145,7 +145,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Sets the fourth move of a pokemon
      * 
-     * @param   String  move4   -   The new move name, seen only by the user
+     * @param   move4   The new move name, seen only by the user
      */
     public void setMove4(String move4) {
 
@@ -155,7 +155,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the name of the pokemon
      * 
-     * @return  String  name    -   The name of the pokemon
+     * @return  name    The name of the pokemon
      */
     public String getName() {
 
@@ -165,7 +165,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the type of the pokemon
      * 
-     * @return  String  type    -   The type of the pokemon
+     * @return  type    The type of the pokemon
      */
     public String getType() {
 
@@ -175,7 +175,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the current health of the pokemon
      * 
-     * @return  double  health  -   The health of the pokemon
+     * @return  health  The health of the pokemon
      */
     public double getHealth() {
 
@@ -185,7 +185,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the used move of the pokemon
      * 
-     * @return  int usedMove    -   The used move of the pokemon
+     * @return  usedMove    The used move of the pokemon
      */
     public int getUsedMove() {
 
@@ -195,7 +195,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the first move of the pokemon
      * 
-     * @return  String  move1   -   The first move of the pokemon
+     * @return  move1   The first move of the pokemon
      */
     public String getMove1() {
 
@@ -205,7 +205,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the second move of the pokemon
      * 
-     * @return  String  move2   -   The second move of the pokemon
+     * @return  move2   The second move of the pokemon
      */
     public String getMove2() {
 
@@ -215,7 +215,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the third move of the pokemon
      * 
-     * @return  String  move3   -   The third move of the pokemon
+     * @return  move3   The third move of the pokemon
      */
     public String getMove3() {
 
@@ -225,7 +225,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     /**
      * Returns the fourth move of the pokemon
      * 
-     * @return  String  move4   -   The fourth move of the pokemon
+     * @return  move4   The fourth move of the pokemon
      */
     public String getMove4() {
 
@@ -236,10 +236,10 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * The main damage calculation step of the battle simulations.
      * Takes into account type effectivity and returns damage based on it
      * 
-     * @param   Pokemon     your            -   The pokemon which is controlled by the user
-     * @param   Pokemon     oppponent       -   The pokemon which is controlled by the CPU
-     * @param   double      yourDamage      -   The unmodified damage yourPoke recieves
-     * @param   double      opponentDamage  -   The unmodified damage opponentPoke recieves
+     * @param   your            The pokemon which is controlled by the user
+     * @param   oppponent       The pokemon which is controlled by the CPU
+     * @param   yourDamage      The unmodified damage yourPoke recieves
+     * @param   opponentDamage  The unmodified damage opponentPoke recieves
      */
     public static void Attack(Pokemon your, Pokemon opponent, double yourDamage, double opponentDamage) {
 
