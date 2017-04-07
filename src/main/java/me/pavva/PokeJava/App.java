@@ -2,6 +2,7 @@ package me.pavva.PokeJava;
 
 import java.util.Scanner; //User input
 import java.util.Random; //Random numbers
+import java.lang.Error;
 
 /**
  * me.pavva.PokeJava.App
@@ -15,8 +16,8 @@ import java.util.Random; //Random numbers
 public class App {
 
     @SuppressWarnings("unused")
-    public static void main(String[] args) throws IllegalArgumentException {
-
+    public static void main(String[] args) throws IllegalArgumentException, Error {
+    
         final String ANSI_RESET = "\u001B[0m"; //ANSI Color Codes
         final String ANSI_BLACK = "\u001B[30m";
         final String ANSI_RED = "\u001B[31m";
