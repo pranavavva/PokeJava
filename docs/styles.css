@@ -1,0 +1,20 @@
+div.footer {
+    background-color: grey;
+}
+
+button.PokeJavaNavButton {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #4CAF50; /* Green */
+    border: 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.PokeJavaNavButton:hover {
+    background-color: white;
+    color: #4CAF50
+}
