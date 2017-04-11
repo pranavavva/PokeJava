@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
 [![Build Status](https://travis-ci.org/20avva/PokeJava.svg?branch=master)](https://travis-ci.org/20avva/PokeJava)
 [![CircleCI](https://circleci.com/gh/20avva/PokeJava.svg?style=svg)](https://circleci.com/gh/20avva/PokeJava)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
