@@ -52,8 +52,9 @@ Please run `mvn clean` before pushing to git to prevent any uneeded file clashes
     <a href="/humans.txt">
         <img src="http://humanstxt.org/img/oficial-logos/humanstxt-transparent-color.png" alt="humansTXT" style="width:88px;height:31px;">
     </a>
+    
     <a href="http://pavva.me">
-        <button type="button" class="PokeJavaNavButton">
+        <button type="button" class="HomeButton">
             Back To Home
         </button>
     </a>

@@ -1,8 +1,8 @@
-div.footer {
+.footer {
     background-color: grey;
 }
 
-button.PokeJavaNavButton {
+button.HomeButton {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     background-color: #4CAF50; /* Green */
@@ -14,7 +14,7 @@ button.PokeJavaNavButton {
     display: inline-block;
 }
 
-button.PokeJavaNavButton:hover {
+button.HomeButton:hover {
     background-color: white;
     color: #4CAF50
 }
