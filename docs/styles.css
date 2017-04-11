@@ -52,7 +52,7 @@ button.JavaDocButton {
     display: inline-block;
 }
 
-button.HomeButton:hover {
+button.JavaDocButton:hover {
     background-color: white;
     color: #AF4BAA;
 }
@@ -69,7 +69,7 @@ button.MavenDocButton {
     display: inline-block;
 }
 
-button.HomeButton:hover {
+button.MavenDocButton:hover {
     background-color: white;
     color: #6869FF;
 }
