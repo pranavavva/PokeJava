@@ -2,6 +2,27 @@ div.footer {
     background-color: grey;
 }
 
+/* Template for new nav bar buttons
+
+   button.HomeButton {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-color: #4CAF50;
+    border: 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.HomeButton:hover {
+    background-color: white;
+    color: #4CAF50
+}
+ */
+
+
 button.HomeButton {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -17,4 +38,38 @@ button.HomeButton {
 button.HomeButton:hover {
     background-color: white;
     color: #4CAF50
+}
+
+button.JavaDocButton {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-color: #AF4BAA;
+    border: 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.HomeButton:hover {
+    background-color: white;
+    color: #AF4BAA;
+}
+
+button.MavenDocButton {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-color: #6869FF;
+    border: 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.HomeButton:hover {
+    background-color: white;
+    color: #6869FF;
 }

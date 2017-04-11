@@ -71,4 +71,16 @@ Please run `mvn clean` before pushing to git to prevent any uneeded file clashes
             Back To Home
         </button>
     </a>
+    
+    <a href="JavaDoc/index.html">
+        <button type="button" class="JavaDocButton">
+            JavaDoc
+        </button>
+    </a>
+    
+    <a href="MavenDoc/index.html">
+        <button type="button" class="MavenDocButton">
+            MavenDoc
+        </button>
+    </a>
 </div>
