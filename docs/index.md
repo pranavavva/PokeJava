@@ -31,6 +31,11 @@ Please run `mvn clean` before pushing to git to prevent any uneeded file clashes
 # Project Tree
 ```
 .
+├── _config.yml
+├── docs
+│   ├── _config.yml
+│   ├── index.md
+│   └── styles.css
 ├── LICENSE
 ├── pom.xml
 ├── README.md
@@ -49,7 +54,7 @@ Please run `mvn clean` before pushing to git to prevent any uneeded file clashes
                     └── PokeJava
                         └── PokemonTest.java
 
-11 directories, 6 files
+12 directories, 10 files
 ```
 
 <div class="footer">
