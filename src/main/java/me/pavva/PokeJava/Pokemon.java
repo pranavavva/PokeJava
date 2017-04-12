@@ -253,10 +253,9 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
         double yourTypeBonus; // Initializing type bonus variables
         double opponentTypeBonus;
 
-        //Type Checking
-        //This system uses a permutation system to cover all possible events
-        //TODO finish all 171 permutations in this damage checking system
-        //TODO begin type checking block
+        // Type Checking
+        // This system uses a permutation system to cover all possible events
+        // Finish all 171 permutations in this damage checking system
 
         if (your.getType() == "water" && opponent.getType() == "fire") {
 
@@ -310,7 +309,6 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
         }
 
-        //TODO end type checking block
 
         your.setHealth(your.getHealth() - (yourDamage * opponentTypeBonus));
         opponent.setHealth(opponent.getHealth() - (opponentDamage * yourTypeBonus));
