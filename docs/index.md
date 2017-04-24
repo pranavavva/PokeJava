@@ -67,19 +67,19 @@ Please run `mvn clean` before pushing to git to prevent any uneeded file clashes
     </a>
     
     <a href="http://pavva.me">
-        <button type="button" class="HomeButton">
+        <button type="button" class="Button1">
             Back To Home
         </button>
     </a>
     
     <a href="JavaDoc/index.html">
-        <button type="button" class="JavaDocButton">
+        <button type="button" class="Button2">
             JavaDoc
         </button>
     </a>
     
     <a href="MavenDoc/index.html">
-        <button type="button" class="MavenDocButton">
+        <button type="button" class="Button3">
             MavenDoc
         </button>
     </a>
