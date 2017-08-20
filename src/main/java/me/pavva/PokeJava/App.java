@@ -2,7 +2,6 @@ package me.pavva.PokeJava;
 
 import java.util.Scanner; //User input
 import java.util.Random; //Random numbers
-import java.lang.Error;
 
 /**
  * me.pavva.PokeJava.App
@@ -16,7 +15,7 @@ import java.lang.Error;
 public class App {
 
     @SuppressWarnings("unused")
-    public static void main(String[] args) throws IllegalArgumentException, Error {
+    public static void main(String[] args) throws IllegalArgumentException {
     
         final String ANSI_RESET = "\u001B[0m"; //ANSI Color Codes
         final String ANSI_BLACK = "\u001B[30m";
@@ -97,7 +96,7 @@ public class App {
             System.out.print("Type the number corresponding to the move you would like " + yourPoke.getName()
                              + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
             yourPoke.setUsedMove(s.nextInt());
-
+            
 
             if (yourPoke.getUsedMove() == 1) {
 

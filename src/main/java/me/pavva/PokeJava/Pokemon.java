@@ -1,4 +1,6 @@
 package me.pavva.PokeJava;
+
+import java.util.*;
 /**
  * me.pavva.PokeJava.Pokemon
  * 
@@ -11,13 +13,15 @@ package me.pavva.PokeJava;
 public class Pokemon { //Pokemon Object Constructors and get-set methods
 
     private String name;
-    private String type;
+    private Type type;
     private double health;
-    private int    usedMove;
-    private String move1;
-    private String move2;
-    private String move3;
-    private String move4;
+    private int attack;
+    private int defense;
+    private ArrayList<Move> moveList;
+    private Move move1;
+    private Move move2;
+    private Move move3;
+    private Move move4;
 
     /**
      * Pokemon object constuctor with optional params passed in
@@ -34,23 +38,30 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * @see     Pokemon.Pokemon()
      * @see     Pokemon.Attack(Pokemon, Pokemon, double, double)
      */
-    public Pokemon(String pokemon_name,
-                   String pokemon_type,
-                   double pokemon_health,
-                   int pokemon_used_move,
-                   String pokemon_move1,
-                   String pokemon_move2,
-                   String pokemon_move3,
-                   String pokemon_move4) {
+    public Pokemon(String name,
+                   Type type,
+                   double health,
+                   int attack,
+                   int defense,
+                   Move move1,
+                   Move move2,
+                   Move move3,
+                   Move move4) {
 
-        this.name = pokemon_name;
-        this.type = pokemon_type;
-        this.health = pokemon_health;
-        this.usedMove = pokemon_used_move;
-        this.move1 = pokemon_move1;
-        this.move2 = pokemon_move2;
-        this.move3 = pokemon_move3;
-        this.move4 = pokemon_move4;
+        this.name = name;
+        this.type = type;
+        this.health = health;
+        this.attack = attack;
+        this.defense = defense;
+        this.move1 = move1;
+        this.move2 = move2;
+        this.move3 = move3;
+        this.move4 = move4;
+        
+        moveList.add(move1);
+        moveList.add(move2);
+        moveList.add(move3);
+        moveList.add(move4);
 
     }
 
@@ -63,7 +74,8 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
         this.name = null;
         this.type = null;
         this.health = 0.0;
-        this.usedMove = 0;
+        this.attack = 0;
+        this.defense = 0;
         this.move1 = null;
         this.move2 = null;
         this.move3 = null;
@@ -85,7 +97,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @param  type     The new type of the pokemon
      */
-    public void setType(String type) {
+    public void setType(Type type) {
 
         this.type = type;
     }
@@ -100,16 +112,13 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
         this.health = health;
     }
-
-    /**
-     * Sets the usedMove of a pokemon
-     * 
-     * @param   usedMove    The used to be moved in the next damage checking turn
-     * @see     App.main(String[] args)
-     */
-    public void setUsedMove(int usedMove) {
-
-        this.usedMove = usedMove;
+    
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+    
+    public void setDefense(int defense) {
+        this.defense = defense;
     }
 
     /**
@@ -117,7 +126,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @param   move1   The new move name, seen only by the user
      */
-    public void setMove1(String move1) {
+    public void setMove1(Move move1) {
 
         this.move1 = move1;
     }
@@ -127,7 +136,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @param  move2   The new move name, seen only by the user
      */
-    public void setMove2(String move2) {
+    public void setMove2(Move move2) {
 
         this.move2 = move2;
     }
@@ -137,7 +146,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @param  move3   The new move name, seen only by the user
      */
-    public void setMove3(String move3) {
+    public void setMove3(Move move3) {
 
         this.move3 = move3;
     }
@@ -147,7 +156,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @param   move4   The new move name, seen only by the user
      */
-    public void setMove4(String move4) {
+    public void setMove4(Move move4) {
 
         this.move4 = move4;
     }
@@ -167,7 +176,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @return  type    The type of the pokemon
      */
-    public String getType() {
+    public Type getType() {
 
         return this.type;
     }
@@ -181,15 +190,13 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
         return this.health;
     }
-
-    /**
-     * Returns the used move of the pokemon
-     * 
-     * @return  usedMove    The used move of the pokemon
-     */
-    public int getUsedMove() {
-
-        return this.usedMove;
+    
+    public int getAttack() {
+        return this.attack;
+    }
+    
+    public int getDefense() {
+        return this.defense;
     }
 
     /**
@@ -197,7 +204,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @return  move1   The first move of the pokemon
      */
-    public String getMove1() {
+    public Move getMove1() {
 
         return this.move1;
     }
@@ -207,7 +214,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @return  move2   The second move of the pokemon
      */
-    public String getMove2() {
+    public Move getMove2() {
 
         return this.move2;
     }
@@ -217,7 +224,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @return  move3   The third move of the pokemon
      */
-    public String getMove3() {
+    public Move getMove3() {
 
         return this.move3;
     }
@@ -227,92 +234,9 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * 
      * @return  move4   The fourth move of the pokemon
      */
-    public String getMove4() {
+    public Move getMove4() {
 
         return this.move4;
-    }
-
-    /**
-     * The main damage calculation step of the battle simulations.
-     * Takes into account type effectivity and returns damage based on it
-     * 
-     * @param   your            The pokemon which is controlled by the user
-     * @param   oppponent       The pokemon which is controlled by the CPU
-     * @param   yourDamage      The unmodified damage yourPoke recieves
-     * @param   opponentDamage  The unmodified damage opponentPoke recieves
-     */
-    public static void Attack(Pokemon your, Pokemon opponent, double yourDamage, double opponentDamage) {
-
-        /*
-         * yourPoke needs to be passed in for "your" ALWAYS
-         * opponentPoke needs to be passed in for "opponent" ALWAYS
-         * yourDamage refers to the unmodified damage yourPoke gets
-         * opponentDamage refers to the unmodified damage opponentPoke gets
-         */
-
-        double yourTypeBonus; // Initializing type bonus variables
-        double opponentTypeBonus;
-
-        // Type Checking
-        // This system uses a permutation system to cover all possible events
-        // Finish all 171 permutations in this damage checking system
-
-        if (your.getType() == "water" && opponent.getType() == "fire") {
-
-            yourTypeBonus = 2.0;
-            opponentTypeBonus = 0.5;
-
-        } else if (your.getType() == "water" && opponent.getType() == "grass") {
-
-            yourTypeBonus = 0.5;
-            opponentTypeBonus = 2.0;
-
-        } else if (your.getType() == "water" && opponent.getType() == "electric") {
-
-            yourTypeBonus = 0.5;
-            opponentTypeBonus = 2.0;
-
-        } else if (your.getType() == "fire" && opponent.getType() == "water") {
-
-            yourTypeBonus = 0.5;
-            opponentTypeBonus = 2.0;
-
-        } else if (your.getType() == "fire" && opponent.getType() == "grass") {
-
-            yourTypeBonus = 2.0;
-            opponentTypeBonus = 0.5;
-
-        } else if (your.getType() == "grass" && opponent.getType() == "water") {
-
-            yourTypeBonus = 2.0;
-            opponentTypeBonus = 0.5;
-
-        } else if (your.getType() == "grass" && opponent.getType() == "fire") {
-
-            yourTypeBonus = 0.5;
-            opponentTypeBonus = 2.0;
-
-        } else if (your.getType() == "electric" && opponent.getType() == "water") {
-
-            yourTypeBonus = 2.0;
-            opponentTypeBonus = 0.5;
-
-        } else if (your.getType() == opponent.getType()) { //In the event both Pokemon are of the same type
-
-            yourTypeBonus = 0.5;
-            opponentTypeBonus = 0.5;
-
-        } else {
-
-            yourTypeBonus = 1.0;
-            opponentTypeBonus = 1.0;
-
-        }
-
-
-        your.setHealth(your.getHealth() - (yourDamage * opponentTypeBonus));
-        opponent.setHealth(opponent.getHealth() - (opponentDamage * yourTypeBonus));
-
     }
 
 }
