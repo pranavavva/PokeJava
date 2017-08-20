@@ -8,7 +8,7 @@ import java.util.Random; //Random numbers
  * 
  * Entry point to Pokemon Battle Simulator
  * 
- * @author  Pranav A.   Github: 20avva
+ * @author  Pranav Avva   Github: 20avva    Web: <a href="https://20avva.github.io">20avva.github.io</a>
  * @version 1.0
  * @see me.pavva.PokeJava.Pokemon
  */
@@ -39,19 +39,14 @@ public class App {
         Scanner s = new Scanner(System.in); //Used for User Input
         Random rand = new Random(); //Random Numbers
 
-        Pokemon charmander = new Pokemon("Charmander", "fire", 120, 0, "Flamethrower", "Flame Charge", "Tackle", "Skull Bash");
-        Pokemon bulbausar = new Pokemon("Bulbasaur", "grass", 120, 0, "Energy Ball", "Solar Ball", "Vine Whip", "Tackle");
-        Pokemon squirtle = new Pokemon("Squirtle", "water", 120, 0, "Aqua Jet", "Hydro Cannon", "Skull Bash", "Crunch");
-        Pokemon pikachu = new Pokemon("Pikachu", "electric", 120, 0, "Thunderbolt", "Electro Ball", "Volt Tackle", "Thunder");
-        Pokemon chimchar = new Pokemon("Chimchar", "fire", 120, 0, "Fire Ball", "Overheat", "Heat Crash", "Tail Whip");
-        Pokemon turtwig = new Pokemon("Turtwig", "grass", 120, 0, "Tackle", "Razor Leaf", "Energy Ball", "Hidden Power");
-        Pokemon piplup = new Pokemon("Piplup", "water", 120, 0, "Bubble Beam", "Water Gun", "Aqua Jet", "Brine");
+        //DEFINE POKEMON HERE
 
-        Pokemon[] poke = new Pokemon[]{charmander, bulbausar, squirtle, pikachu, chimchar, turtwig, piplup};
+        Pokemon[] poke = new Pokemon[]{/* INSERT DEFINED POKEMON HERE*/};
 
         System.out.println(ANSI_GREEN);
 
         
+        // BEGIN POKEMON SELECTION BLOCK
         for (Pokemon p : poke) {
             
             System.out.print(p.getName() + " is of type " + p.getType() + ". It has " + p.getHealth()
@@ -85,85 +80,31 @@ public class App {
         }
 
         System.out.println(ANSI_RESET + ANSI_PURPLE);
+        // END POKEMON SELECTION BLOCK
 
+        // BEGIN GAME WHILE LOOP
         while (yourPoke.getHealth() > 0.0 && opponentPoke.getHealth() > 0.0) {
 
+            // BEGIN PRE-FIGHT INFO UPDATE
+            
             System.out.println(ANSI_BLUE + yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
             System.out.println("The foe's " + opponentPoke.getName() + " has " + opponentPoke.getHealth() + " health left.\n");
-
+            
+            // END PRE-FIGHT INFO UPDATE
+            
+            // BEGIN MOVE LIST
             System.out.println(yourPoke.getName() + " knows\n1 - " + yourPoke.getMove1() + "\t2 - " + yourPoke.getMove2() + "\n3 - "
                                + yourPoke.getMove3() + "\t4 - " + yourPoke.getMove4() + ANSI_GREEN);
             System.out.print("Type the number corresponding to the move you would like " + yourPoke.getName()
                              + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
-            yourPoke.setUsedMove(s.nextInt());
+            // END MOVE LIST
             
 
-            if (yourPoke.getUsedMove() == 1) {
+            // LOOP WHICH ALLOWS USER TO PICK MOVE OR SWITCH POKEMON
 
-                Pokemon.Attack(yourPoke, opponentPoke, 0.0, 20.0);
-                System.out.println(yourPoke.getName() + " used " + yourPoke.getMove1());
-
-            } else if (yourPoke.getUsedMove() == 2) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 0.0, 18.0);
-                System.out.println(yourPoke.getName() + " used " + yourPoke.getMove2());
-
-            } else if (yourPoke.getUsedMove() == 3) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 5, 25);
-                System.out.println(yourPoke.getName() + " used " + yourPoke.getMove3());
-
-            } else if (yourPoke.getUsedMove() == 4) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 10, 30);
-                System.out.println(yourPoke.getName() + " used " + yourPoke.getMove4());
-
-            } else if (yourPoke.getUsedMove() == 5) {
-
-                for (int j = 0; j < poke.length; j++) {
-
-                    System.out.println(poke[j].getName() + " is of type " + poke[j].getType() + ". It has " + poke[j].getHealth()
-                                       + " health points and it knows " + poke[j].getMove1() + ", " + poke[j].getMove2() + ", "
-                                       + poke[j].getMove3() + ", " + poke[j].getMove4() + ".");
-
-                }
-
-                System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
-                yourPick = s.nextInt();
-                yourPoke = poke[yourPick - 1];
-
-            } else {
-
-                System.gc();
-                s.close();
-                throw new IllegalArgumentException(ANSI_RED + "Please enter a number between 1 and 4, inclusive" + ANSI_RESET);
-
-            }
-
-            opponentPoke.setUsedMove(rand.nextInt(4));
-
-            if (opponentPoke.getUsedMove() == 1) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 10.0, 0.0);
-                System.out.println("The foe's " + opponentPoke.getName() + " used " + opponentPoke.getMove1() + "\n");
-
-            } else if (opponentPoke.getUsedMove() == 2) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 18.0, 0.0);
-                System.out.println("The foe's " + opponentPoke.getName() + " used " + opponentPoke.getMove2() + "\n");
-
-            } else if (opponentPoke.getUsedMove() == 3) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 25.0, 5.0);
-                System.out.println("The foe's " + opponentPoke.getName() + " used " + opponentPoke.getMove3() + "\n");
-
-            } else if (opponentPoke.getUsedMove() == 4) {
-
-                Pokemon.Attack(yourPoke, opponentPoke, 30.0, 10.0);
-                System.out.println("The foe's " + opponentPoke.getName() + " used " + opponentPoke.getMove4() + "\n");
-
-            }
-
+            // LOOP WHICH ALLOWS CPU TO PICK MOVE OR SWITCH POKEMON
+            
+            //BEGIN HEALTH CHECKING BLOCK
             if (yourPoke.getHealth() < 0.0 && opponentPoke.getHealth() > 0.0) {
 
                 System.out.println("Sorry, but your opponent won.");
@@ -176,10 +117,9 @@ public class App {
                 System.out.println("The foe's " + opponentPoke.getName() + " has fainted.");
                 System.out.println(yourPoke.getName() + " has " + yourPoke.getHealth() + " health left.");
 
-            }
-
-
-        }
+            } //END HEALTH CHECKING BLOCK
+            
+        } // END GAME WHILE LOOP
 
         System.gc();
         s.close();

@@ -1,6 +1,7 @@
 package me.pavva.PokeJava;
 
 import java.util.*;
+
 /**
  * me.pavva.PokeJava.Pokemon
  * 
@@ -12,19 +13,19 @@ import java.util.*;
  */
 public class Pokemon { //Pokemon Object Constructors and get-set methods
 
-    private String name;
-    private Type type;
-    private double health;
-    private int attack;
-    private int defense;
+    private String          name;
+    private Type            type;
+    private double          health;
+    private int             attack;
+    private int             defense;
     private ArrayList<Move> moveList;
-    private Move move1;
-    private Move move2;
-    private Move move3;
-    private Move move4;
+    private Move            move1;
+    private Move            move2;
+    private Move            move3;
+    private Move            move4;
 
     /**
-     * Pokemon object constuctor with optional params passed in
+     * Pokemon object constuctor with params passed in
      * 
      * @param  pokemon_name        -   The name of the created pokemon as reffered to by the user
      * @param  pokemon_type        -   The type of the pokemon, used in damage calculation
@@ -34,19 +35,8 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
      * @param  pokemon_move2       -   The name of the second move a pokemon can use, reffered to by the user
      * @param  pokemon_move3       -   The name of the third move a pokemon can use, reffered to by the user
      * @param  pokemon_move4       -   The name of the fourth move a pokemon can use, reffered to by the user
-     * 
-     * @see     Pokemon.Pokemon()
-     * @see     Pokemon.Attack(Pokemon, Pokemon, double, double)
      */
-    public Pokemon(String name,
-                   Type type,
-                   double health,
-                   int attack,
-                   int defense,
-                   Move move1,
-                   Move move2,
-                   Move move3,
-                   Move move4) {
+    public Pokemon(String name, Type type, double health, int attack, int defense, Move move1, Move move2, Move move3, Move move4) {
 
         this.name = name;
         this.type = type;
@@ -57,7 +47,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
         this.move2 = move2;
         this.move3 = move3;
         this.move4 = move4;
-        
+
         moveList.add(move1);
         moveList.add(move2);
         moveList.add(move3);
@@ -67,8 +57,6 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
     /**
      * Default pokemon object constructor, no params passed in
-     * 
-     * @see Pokemon.Pokemon(String, String, double, int, String, String, String, String)
      */
     public Pokemon() {
         this.name = null;
@@ -112,11 +100,11 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
         this.health = health;
     }
-    
+
     public void setAttack(int attack) {
         this.attack = attack;
     }
-    
+
     public void setDefense(int defense) {
         this.defense = defense;
     }
@@ -190,11 +178,11 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
         return this.health;
     }
-    
+
     public int getAttack() {
         return this.attack;
     }
-    
+
     public int getDefense() {
         return this.defense;
     }
