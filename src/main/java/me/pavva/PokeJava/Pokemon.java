@@ -47,12 +47,12 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
         this.move2 = move2;
         this.move3 = move3;
         this.move4 = move4;
-
-        moveList.add(move1);
-        moveList.add(move2);
-        moveList.add(move3);
-        moveList.add(move4);
-
+        
+        this.moveList = new ArrayList<Move>();
+        this.moveList.add(move1);
+        this.moveList.add(move2);
+        this.moveList.add(move3);
+        this.moveList.add(move4);
     }
 
     /**
@@ -69,6 +69,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
         this.move3 = null;
         this.move4 = null;
     }
+
 
     /**
      * Sets the name of a pokemon object
@@ -185,6 +186,10 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
 
     public int getDefense() {
         return this.defense;
+    }
+
+    public ArrayList<Move> getMoveList() {
+        return this.moveList;
     }
 
     /**
