@@ -7,10 +7,10 @@ public class TypeTest {
     
     @Test
     public void testDoStabCheck() {
-        Move move1 = new Move(Type.NORMAL, 85, 20);
-        Move move2 = new Move(Type.NORMAL, 85, 20);
-        Move move3 = new Move(Type.NORMAL, 85, 20);
-        Move move4 = new Move(Type.NORMAL, 85, 20);
+        Move move1 = new Move("move1", Type.NORMAL, 85, 20);
+        Move move2 = new Move("move1", Type.NORMAL, 85, 20);
+        Move move3 = new Move("move1", Type.NORMAL, 85, 20);
+        Move move4 = new Move("move1", Type.NORMAL, 85, 20);
         
         
         Pokemon pokemon1 = new Pokemon("Pokemon1", Type.NORMAL, 100, 85, 85, move1, move2, move3, move4);
@@ -27,9 +27,9 @@ public class TypeTest {
     
     @Test
     public void testDoEffeftCheck() {
-        Move moveFire = new Move(Type.FIRE, 85, 20);
-        Move moveWater = new Move(Type.WATER, 85, 20);
-        Move moveGrass = new Move(Type.GRASS, 85, 20);
+        Move moveFire = new Move("FireMove", Type.FIRE, 85, 20);
+        Move moveWater = new Move("WaterMove", Type.WATER, 85, 20);
+        Move moveGrass = new Move("GrassMove", Type.GRASS, 85, 20);
         
         Pokemon pokemon1 = new Pokemon("Pokemon1", Type.FIRE, 100, 85, 85, moveFire, moveFire, moveFire, moveFire);
         Pokemon pokemon2 = new Pokemon("Pokemon2", Type.WATER, 100, 85, 85, moveWater, moveWater, moveWater, moveWater);

@@ -4,7 +4,7 @@
 
     <groupId>me.pavva.PokeJava</groupId>
     <artifactId>PokeJavaApp</artifactId>
-    <version>1.0</version>
+    <version>3.0</version>
     <packaging>jar</packaging>
 
     <name>PokeJavaApp</name>
