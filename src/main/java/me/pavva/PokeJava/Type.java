@@ -1,5 +1,19 @@
 package me.pavva.PokeJava;
 
+// TODO: Testing and Javadoc
+
+
+/**
+ * me.pavva.PokeJava.Type
+ * 
+ * <p>An enum containing all 17 types in the Pokemon world. It also contains two 
+ * methods, one for checking Same-Type-Attack-Bonus (STAB), and one for check 
+ * effectivity.</p>
+ * 
+ * @see me.pavva.PokeJava.App
+ * @see me.pavva.PokeJava.Pokemon
+ * @see me.pavva.PokeJava.Move
+ */
 public enum Type {
     NORMAL,
     FIGHT,
@@ -19,7 +33,14 @@ public enum Type {
     DRAGON,
     DARK,
     FAIRY;
-
+    
+    /**
+     * Checks for STAB (Same-Type-Attack-Bonus).
+     * 
+     * @param move The Move being compared
+     * @param pokemon The Pokemon to which the Move is being compared
+     * @return The double value of the STAB. 1.5 if doStabCheck is true, 1.0 if doStabCheck is false.
+     */
     static double doStabCheck(Move move, Pokemon pokemon) {
 
         if (move.getType() == pokemon.getType()) {
@@ -28,7 +49,14 @@ public enum Type {
             return 1.0;
         }
     }
-
+    
+    /**
+     * Checks type effectivity. Uses the chart found <a href="http://vignette3.wikia.nocookie.net/roblox-pokemon-brickbronze/images/b/bc/TypeChart.png/revision/latest?cb=20151025020421">here</a>.
+     * 
+     * @param move The Move which is being used.
+     * @param pokemon The Pokemon which is receiving damage.
+     * @return The double value of the type effictivity. 2.0 if Super Effective, 0.5 if Not Very Effective, 0.0 if Not Effective, and 1.0 otherwise.
+     */
     static double doEffectCheck(Move move, Pokemon pokemon) {
         Type moveType = move.getType();
         Type pokemonType = pokemon.getType();
@@ -209,23 +237,19 @@ public enum Type {
 
             return 0.0;
 
-        } else if (moveType.equals(DARK)
-                   && (pokemonType.equals(GHOST) || pokemonType.equals(PSYCHIC))) {
+        } else if (moveType.equals(DARK) && (pokemonType.equals(GHOST) || pokemonType.equals(PSYCHIC))) {
 
             return 2.0;
 
-        } else if (moveType.equals(DARK)
-                   && (pokemonType.equals(FIGHT) || pokemonType.equals(DARK) || pokemonType.equals(FAIRY))) {
+        } else if (moveType.equals(DARK) && (pokemonType.equals(FIGHT) || pokemonType.equals(DARK) || pokemonType.equals(FAIRY))) {
 
             return 0.5;
 
-        } else if (moveType.equals(FAIRY)
-                   && (pokemonType.equals(FIGHT) || pokemonType.equals(DRAGON) || pokemonType.equals(DARK))) {
+        } else if (moveType.equals(FAIRY) && (pokemonType.equals(FIGHT) || pokemonType.equals(DRAGON) || pokemonType.equals(DARK))) {
 
             return 2.0;
 
-        } else if (moveType.equals(FAIRY)
-                   && (pokemonType.equals(POISON) || pokemonType.equals(STEEL) || pokemonType.equals(FIRE))) {
+        } else if (moveType.equals(FAIRY) && (pokemonType.equals(POISON) || pokemonType.equals(STEEL) || pokemonType.equals(FIRE))) {
 
             return 0.5;
 

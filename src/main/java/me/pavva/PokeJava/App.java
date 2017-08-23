@@ -13,10 +13,16 @@ import java.util.ArrayList;
  * @version 3.0
  * @since Java 1.7
  * @see me.pavva.PokeJava.Pokemon
+ * @see me.pavva.PokeJava.Type
+ * @see me.pavva.PokeJava.Move
  */
 public class App {
-
+    
     @SuppressWarnings("unused")
+    /**
+     * Main method in the Pokemon Battle Simulator
+     * @param args A string array created from command-line arguments. Not used in this program.
+     */
     public static void main(String[] args) throws IllegalArgumentException {
 
         final String ANSI_RESET = "\u001B[0m"; // ANSI Color Codes
