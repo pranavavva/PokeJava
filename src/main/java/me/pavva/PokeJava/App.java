@@ -52,15 +52,21 @@ public class App {
         Move waterPulse = new Move("Water Pulse", Type.WATER, 60, 20);
         Move bite = new Move("Bite", Type.DARK, 60, 25);
         Move hydroPump = new Move("Hydro Pump", Type.WATER, 150, 5);
+        Move petalDance = new Move("Petal Dance", Type.GRASS, 120, 10);
+        Move solarBeam = new Move("Solar Beam", Type.GRASS, 120, 10);
+        Move sludgeBomb = new Move("Sludge Bomb", Type.POISON, 90, 10);
+        Move earthquake = new Move("Earthquake", Type.GROUND, 100, 10);
 
         // DEFINE POKEMON HERE
         Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, wingAttack, flareBlitz, heatWave, dragonClaw);
         Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, flashCannon, waterPulse, bite, hydroPump);
+        Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, petalDance, solarBeam, sludgeBomb, earthquake);
 
 
         ArrayList<Pokemon> poke = new ArrayList<Pokemon>();
         poke.add(charizard);
         poke.add(blastoise);
+        poke.add(venusaur);
 
         System.out.println(ANSI_GREEN);
 
