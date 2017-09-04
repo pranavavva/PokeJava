@@ -5,6 +5,7 @@ import java.util.Random; // Random numbers
 import java.util.ArrayList;
 
 import me.pavva.PokeJava.moves.*;
+import me.pavva.PokeJava.pokemon.*;
 
 /**
  * me.pavva.PokeJava.App
@@ -19,62 +20,59 @@ import me.pavva.PokeJava.moves.*;
  * @see me.pavva.PokeJava.Move
  */
 public class App {
-    
-    @SuppressWarnings("unused")
+    static final BugPokemon      bug                    = new BugPokemon();
+    static final DarkPokemon     dark                   = new DarkPokemon();
+    static final DragonPokemon   dragon                 = new DragonPokemon();
+    static final ElectricPokemon electric               = new ElectricPokemon();
+    static final FairyPokemon    fairy                  = new FairyPokemon();
+    static final FightPokemon    flight                 = new FightPokemon();
+    static final FirePokemon     fire                   = new FirePokemon();
+    static final FlyingPokemon   flying                 = new FlyingPokemon();
+    static final GhostPokemon    ghost                  = new GhostPokemon();
+    static final GrassPokemon    grass                  = new GrassPokemon();
+    static final GroundPokemon   ground                 = new GroundPokemon();
+    static final IcePokemon      ice                    = new IcePokemon();
+    static final NormalPokemon   normal                 = new NormalPokemon();
+    static final PoisonPokemon   poison                 = new PoisonPokemon();
+    static final PsychicPokemon  psychic                = new PsychicPokemon();
+    static final RockPokemon     rock                   = new RockPokemon();
+    static final SteelPokemon    steel                  = new SteelPokemon();
+    static final WaterPokemon    water                  = new WaterPokemon();
+
+
+    static final String          ANSI_RESET             = "\u001B[0m";          // ANSI Color Codes
+    static final String          ANSI_BLACK             = "\u001B[30m";
+    static final String          ANSI_RED               = "\u001B[31m";
+    static final String          ANSI_GREEN             = "\u001B[32m";
+    static final String          ANSI_YELLOW            = "\u001B[33m";
+    static final String          ANSI_BLUE              = "\u001B[34m";
+    static final String          ANSI_PURPLE            = "\u001B[35m";
+    static final String          ANSI_CYAN              = "\u001B[36m";
+    static final String          ANSI_WHITE             = "\u001B[37m";
+
+    static final String          ANSI_BLACK_BACKGROUND  = "\u001B[40m";         // ANSI Background Color Codes
+    static final String          ANSI_RED_BACKGROUND    = "\u001B[41m";
+    static final String          ANSI_GREEN_BACKGROUND  = "\u001B[42m";
+    static final String          ANSI_YELLOW_BACKGROUND = "\u001B[43m";
+    static final String          ANSI_BLUE_BACKGROUND   = "\u001B[44m";
+    static final String          ANSI_PURPLE_BACKGROUND = "\u001B[45m";
+    static final String          ANSI_CYAN_BACKGROUND   = "\u001B[46m";
+    static final String          ANSI_WHITE_BACKGROUND  = "\u001B[47m";
+
     /**
      * Main method in the Pokemon Battle Simulator
      * @param args A string array created from command-line arguments. Not used in this program.
      */
     public static void main(String[] args) throws IllegalArgumentException {
 
-        final String ANSI_RESET = "\u001B[0m"; // ANSI Color Codes
-        final String ANSI_BLACK = "\u001B[30m";
-        final String ANSI_RED = "\u001B[31m";
-        final String ANSI_GREEN = "\u001B[32m";
-        final String ANSI_YELLOW = "\u001B[33m";
-        final String ANSI_BLUE = "\u001B[34m";
-        final String ANSI_PURPLE = "\u001B[35m";
-        final String ANSI_CYAN = "\u001B[36m";
-        final String ANSI_WHITE = "\u001B[37m";
-
-        final String ANSI_BLACK_BACKGROUND = "\u001B[40m"; // ANSI Background Color Codes
-        final String ANSI_RED_BACKGROUND = "\u001B[41m";
-        final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
-        final String ANSI_YELLOW_BACKGROUND = "\u001B[43m";
-        final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
-        final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
-        final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
-        final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
         Scanner sc = new Scanner(System.in); // Used for User Input
         Random rand = new Random(); // Random Numbers for CPU move selection
 
-        // DEFINE MOVES HERE 
-        // TODO: Sort by Type
-        // TODO: Move moves into a seperate class. Moves.java
-        Move wingAttack = new Move("Wing Attack", Type.FLYING, 60, 35);
-        Move flareBlitz = new Move("Flare Blitz", Type.FIRE, 120, 15);
-        Move heatWave = new Move("Heat Wave", Type.FIRE, 95, 10);
-        Move dragonClaw = new Move("Dragon Claw", Type.DRAGON, 80, 15);
-        Move flashCannon = new Move("Flash Cannon", Type.STEEL, 80, 10);
-        Move waterPulse = new Move("Water Pulse", Type.WATER, 60, 20);
-        Move bite = new Move("Bite", Type.DARK, 60, 25);
-        Move hydroPump = new Move("Hydro Pump", Type.WATER, 150, 5);
-        Move petalDance = new Move("Petal Dance", Type.GRASS, 120, 10);
-        Move solarBeam = new Move("Solar Beam", Type.GRASS, 120, 10);
-        Move sludgeBomb = new Move("Sludge Bomb", Type.POISON, 90, 10);
-        Move earthquake = new Move("Earthquake", Type.GROUND, 100, 10);
-
-        // DEFINE POKEMON HERE
-        Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, wingAttack, flareBlitz, heatWave, dragonClaw);
-        Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, flashCannon, waterPulse, bite, hydroPump);
-        Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, petalDance, solarBeam, sludgeBomb, earthquake);
-
-
         ArrayList<Pokemon> poke = new ArrayList<Pokemon>();
-        poke.add(charizard);
-        poke.add(blastoise);
-        poke.add(venusaur);
+        poke.add(fire.charizard);
+        poke.add(water.blastoise);
+        poke.add(grass.venusaur);
 
         System.out.println(ANSI_GREEN);
 
