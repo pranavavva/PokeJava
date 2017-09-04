@@ -1,6 +1,6 @@
 package me.pavva.PokeJava;
 
-// TODO: Testing and Javadoc
+// TODO: Testing
 
 
 /**
