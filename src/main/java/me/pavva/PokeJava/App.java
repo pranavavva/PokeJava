@@ -4,6 +4,8 @@ import java.util.Scanner; // User input
 import java.util.Random; // Random numbers
 import java.util.ArrayList;
 
+import me.pavva.PokeJava.moves.*;
+
 /**
  * me.pavva.PokeJava.App
  * 
