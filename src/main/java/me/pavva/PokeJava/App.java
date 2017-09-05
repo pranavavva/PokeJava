@@ -20,44 +20,45 @@ import me.pavva.PokeJava.pokemon.*;
  * @see me.pavva.PokeJava.Move
  */
 public class App {
-    static final BugPokemon      bug                    = new BugPokemon();
-    static final DarkPokemon     dark                   = new DarkPokemon();
-    static final DragonPokemon   dragon                 = new DragonPokemon();
-    static final ElectricPokemon electric               = new ElectricPokemon();
-    static final FairyPokemon    fairy                  = new FairyPokemon();
-    static final FightPokemon    flight                 = new FightPokemon();
-    static final FirePokemon     fire                   = new FirePokemon();
-    static final FlyingPokemon   flying                 = new FlyingPokemon();
-    static final GhostPokemon    ghost                  = new GhostPokemon();
-    static final GrassPokemon    grass                  = new GrassPokemon();
-    static final GroundPokemon   ground                 = new GroundPokemon();
-    static final IcePokemon      ice                    = new IcePokemon();
-    static final NormalPokemon   normal                 = new NormalPokemon();
-    static final PoisonPokemon   poison                 = new PoisonPokemon();
-    static final PsychicPokemon  psychic                = new PsychicPokemon();
-    static final RockPokemon     rock                   = new RockPokemon();
-    static final SteelPokemon    steel                  = new SteelPokemon();
-    static final WaterPokemon    water                  = new WaterPokemon();
+    
+    private static final BugPokemon      bug                    = new BugPokemon();
+    private static final DarkPokemon     dark                   = new DarkPokemon();
+    private static final DragonPokemon   dragon                 = new DragonPokemon();
+    private static final ElectricPokemon electric               = new ElectricPokemon();
+    private static final FairyPokemon    fairy                  = new FairyPokemon();
+    private static final FightPokemon    flight                 = new FightPokemon();
+    private static final FirePokemon     fire                   = new FirePokemon();
+    private static final FlyingPokemon   flying                 = new FlyingPokemon();
+    private static final GhostPokemon    ghost                  = new GhostPokemon();
+    private static final GrassPokemon    grass                  = new GrassPokemon();
+    private static final GroundPokemon   ground                 = new GroundPokemon();
+    private static final IcePokemon      ice                    = new IcePokemon();
+    private static final NormalPokemon   normal                 = new NormalPokemon();
+    private static final PoisonPokemon   poison                 = new PoisonPokemon();
+    private static final PsychicPokemon  psychic                = new PsychicPokemon();
+    private static final RockPokemon     rock                   = new RockPokemon();
+    private static final SteelPokemon    steel                  = new SteelPokemon();
+    private static final WaterPokemon    water                  = new WaterPokemon();
 
 
-    static final String          ANSI_RESET             = "\u001B[0m";          // ANSI Color Codes
-    static final String          ANSI_BLACK             = "\u001B[30m";
-    static final String          ANSI_RED               = "\u001B[31m";
-    static final String          ANSI_GREEN             = "\u001B[32m";
-    static final String          ANSI_YELLOW            = "\u001B[33m";
-    static final String          ANSI_BLUE              = "\u001B[34m";
-    static final String          ANSI_PURPLE            = "\u001B[35m";
-    static final String          ANSI_CYAN              = "\u001B[36m";
-    static final String          ANSI_WHITE             = "\u001B[37m";
+    private static final String          ANSI_RESET             = "\u001B[0m";          // ANSI Color Codes
+    private static final String          ANSI_BLACK             = "\u001B[30m";
+    private static final String          ANSI_RED               = "\u001B[31m";
+    private static final String          ANSI_GREEN             = "\u001B[32m";
+    private static final String          ANSI_YELLOW            = "\u001B[33m";
+    private static final String          ANSI_BLUE              = "\u001B[34m";
+    private static final String          ANSI_PURPLE            = "\u001B[35m";
+    private static final String          ANSI_CYAN              = "\u001B[36m";
+    private static final String          ANSI_WHITE             = "\u001B[37m";
 
-    static final String          ANSI_BLACK_BACKGROUND  = "\u001B[40m";         // ANSI Background Color Codes
-    static final String          ANSI_RED_BACKGROUND    = "\u001B[41m";
-    static final String          ANSI_GREEN_BACKGROUND  = "\u001B[42m";
-    static final String          ANSI_YELLOW_BACKGROUND = "\u001B[43m";
-    static final String          ANSI_BLUE_BACKGROUND   = "\u001B[44m";
-    static final String          ANSI_PURPLE_BACKGROUND = "\u001B[45m";
-    static final String          ANSI_CYAN_BACKGROUND   = "\u001B[46m";
-    static final String          ANSI_WHITE_BACKGROUND  = "\u001B[47m";
+    private static final String          ANSI_BLACK_BACKGROUND  = "\u001B[40m";         // ANSI Background Color Codes
+    private static final String          ANSI_RED_BACKGROUND    = "\u001B[41m";
+    private static final String          ANSI_GREEN_BACKGROUND  = "\u001B[42m";
+    private static final String          ANSI_YELLOW_BACKGROUND = "\u001B[43m";
+    private static final String          ANSI_BLUE_BACKGROUND   = "\u001B[44m";
+    private static final String          ANSI_PURPLE_BACKGROUND = "\u001B[45m";
+    private static final String          ANSI_CYAN_BACKGROUND   = "\u001B[46m";
+    private static final String          ANSI_WHITE_BACKGROUND  = "\u001B[47m";
 
     /**
      * Main method in the Pokemon Battle Simulator
@@ -73,6 +74,7 @@ public class App {
         poke.add(fire.charizard);
         poke.add(water.blastoise);
         poke.add(grass.venusaur);
+        poke.add(ice.avalugg);
 
         System.out.println(ANSI_GREEN);
 
@@ -200,22 +202,27 @@ public class App {
             // BEGIN OPPONENT MOVE
 
             int opponentDecision = rand.nextInt(4);
-
+            
+            System.out.println(ANSI_RED);
             switch (opponentDecision) {
                 case 0:
                     Move.attack(opponentPoke, yourPoke, opponentPoke.getMove1());
+                    System.out.println(opponentPoke.getName() + " used " + opponentPoke.getMove1().getName());
                     break;
                 case 1:
                     Move.attack(opponentPoke, yourPoke, opponentPoke.getMove2());
+                    System.out.println(opponentPoke.getName() + " used " + opponentPoke.getMove2().getName());
                     break;
                 case 2:
                     Move.attack(opponentPoke, yourPoke, opponentPoke.getMove3());
+                    System.out.println(opponentPoke.getName() + " used " + opponentPoke.getMove3().getName());
                     break;
                 case 3:
                     Move.attack(opponentPoke, yourPoke, opponentPoke.getMove4());
+                    System.out.println(opponentPoke.getName() + " used " + opponentPoke.getMove4().getName());
                     break;
             }
-
+            System.out.println(ANSI_GREEN);
             // END OPPONENT MOVE
 
             // BEGIN HEALTH CHECKING BLOCK
