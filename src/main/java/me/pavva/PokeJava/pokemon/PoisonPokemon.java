@@ -22,4 +22,6 @@ public class PoisonPokemon {
     private RockMoves     rock     = new RockMoves();
     private SteelMoves    steel    = new SteelMoves();
     private WaterMoves    water    = new WaterMoves();
+    
+    public Pokemon muk = new Pokemon("Muk", Type.POISON, 414.0, 339, 273, poison.gunkShot, normal.pound, ground.mudBomb, poison.sludgeBomb);
 }
