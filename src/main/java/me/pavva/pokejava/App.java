@@ -13,7 +13,7 @@ import me.pavva.pokejava.pokemon.*;
  * Entry point to Pokemon Battle Simulator
  * 
  * @author  Pranav Avva   Github: 20avva    Web: <a href="https://20avva.github.io">20avva.github.io</a>
- * @version 3.0
+ * @version 4.0
  * @since Java 1.7
  * @see me.pavva.pokejava.Pokemon
  * @see me.pavva.pokejava.Type
