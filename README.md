@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Coverage Status](https://coveralls.io/repos/github/20avva/PokeJava/badge.svg)](https://coveralls.io/github/20avva/PokeJava)
 
+<p style="font-size: 4em;">BelowNot Applicable for current version will update soon</p>
 # PokeJava
 
 A Pokemon Battle Simulator written in Java. Uses the Maven build system. Once upon a time used Gradle.
