@@ -5,11 +5,11 @@ package me.pavva.pokejava;
 
 /**
  * me.pavva.pokejava.Type
- * 
- * <p>An enum containing all 17 types in the Pokemon world. It also contains two 
- * methods, one for checking Same-Type-Attack-Bonus (STAB), and one for check 
+ * <p>
+ * <p>An enum containing all 17 types in the Pokemon world. It also contains two
+ * methods, one for checking Same-Type-Attack-Bonus (STAB), and one for check
  * effectivity.</p>
- * 
+ *
  * @see me.pavva.pokejava.App
  * @see me.pavva.pokejava.Pokemon
  * @see me.pavva.pokejava.Move
@@ -33,11 +33,11 @@ public enum Type {
     DRAGON,
     DARK,
     FAIRY;
-    
+
     /**
      * Checks for STAB (Same-Type-Attack-Bonus).
-     * 
-     * @param move The Move being compared
+     *
+     * @param move    The Move being compared
      * @param pokemon The Pokemon to which the Move is being compared
      * @return The double value of the STAB. 1.5 if doStabCheck is true, 1.0 if doStabCheck is false.
      */
@@ -49,11 +49,11 @@ public enum Type {
             return 1.0;
         }
     }
-    
+
     /**
      * Checks type effectivity. Uses the chart found <a href="http://vignette3.wikia.nocookie.net/roblox-pokemon-brickbronze/images/b/bc/TypeChart.png/revision/latest?cb=20151025020421">here</a>.
-     * 
-     * @param move The Move which is being used.
+     *
+     * @param move    The Move which is being used.
      * @param pokemon The Pokemon which is receiving damage.
      * @return The double value of the type effictivity. 2.0 if Super Effective, 0.5 if Not Very Effective, 0.0 if Not Effective, and 1.0 otherwise.
      */
@@ -84,12 +84,12 @@ public enum Type {
             return 0.0;
 
         } else if (moveType.equals(FIGHT)
-                   && (pokemonType.equals(NORMAL) || pokemonType.equals(ROCK) || pokemonType.equals(STEEL) || pokemonType.equals(ICE) || pokemonType.equals(DARK))) {
+                && (pokemonType.equals(NORMAL) || pokemonType.equals(ROCK) || pokemonType.equals(STEEL) || pokemonType.equals(ICE) || pokemonType.equals(DARK))) {
 
             return 2.0;
 
         } else if (moveType.equals(FIGHT)
-                   && (pokemonType.equals(FLYING) || pokemonType.equals(POISON) || pokemonType.equals(BUG) || pokemonType.equals(PSYCHIC) || pokemonType.equals(FAIRY))) {
+                && (pokemonType.equals(FLYING) || pokemonType.equals(POISON) || pokemonType.equals(BUG) || pokemonType.equals(PSYCHIC) || pokemonType.equals(FAIRY))) {
 
             return 0.5;
 
@@ -110,7 +110,7 @@ public enum Type {
             return 2.0;
 
         } else if (moveType.equals(POISON)
-                   && (pokemonType.equals(POISON) || pokemonType.equals(GROUND) || pokemonType.equals(ROCK) || pokemonType.equals(GHOST))) {
+                && (pokemonType.equals(POISON) || pokemonType.equals(GROUND) || pokemonType.equals(ROCK) || pokemonType.equals(GHOST))) {
 
             return 0.5;
 
@@ -119,8 +119,8 @@ public enum Type {
             return 0.0;
 
         } else if (moveType.equals(GROUND)
-                   && (pokemonType.equals(POISON) || pokemonType.equals(ROCK) || pokemonType.equals(STEEL) || pokemonType.equals(STEEL)
-                       || pokemonType.equals(FIRE) || pokemonType.equals(ELECTRIC))) {
+                && (pokemonType.equals(POISON) || pokemonType.equals(ROCK) || pokemonType.equals(STEEL) || pokemonType.equals(STEEL)
+                || pokemonType.equals(FIRE) || pokemonType.equals(ELECTRIC))) {
 
             return 2.0;
 
@@ -133,7 +133,7 @@ public enum Type {
             return 0.0;
 
         } else if (moveType.equals(ROCK)
-                   && (pokemonType.equals(FLYING) || pokemonType.equals(BUG) || pokemonType.equals(FIRE) || pokemonType.equals(ICE))) {
+                && (pokemonType.equals(FLYING) || pokemonType.equals(BUG) || pokemonType.equals(FIRE) || pokemonType.equals(ICE))) {
 
             return 2.0;
 
@@ -146,8 +146,8 @@ public enum Type {
             return 2.0;
 
         } else if (moveType.equals(BUG)
-                   && (pokemonType.equals(FIGHT) || pokemonType.equals(FLYING) || pokemonType.equals(POISON) || pokemonType.equals(GHOST)
-                       || pokemonType.equals(STEEL) || pokemonType.equals(FIRE) || pokemonType.equals(FAIRY))) {
+                && (pokemonType.equals(FIGHT) || pokemonType.equals(FLYING) || pokemonType.equals(POISON) || pokemonType.equals(GHOST)
+                || pokemonType.equals(STEEL) || pokemonType.equals(FIRE) || pokemonType.equals(FAIRY))) {
 
             return 0.5;
 
@@ -168,12 +168,12 @@ public enum Type {
             return 2.0;
 
         } else if (moveType.equals(FIRE)
-                   && (pokemonType.equals(BUG) || pokemonType.equals(STEEL) || pokemonType.equals(GRASS) || pokemonType.equals(ICE))) {
+                && (pokemonType.equals(BUG) || pokemonType.equals(STEEL) || pokemonType.equals(GRASS) || pokemonType.equals(ICE))) {
 
             return 2.0;
 
         } else if (moveType.equals(FIRE)
-                   && (pokemonType.equals(ROCK) || pokemonType.equals(FIRE) || pokemonType.equals(WATER) || pokemonType.equals(DRAGON))) {
+                && (pokemonType.equals(ROCK) || pokemonType.equals(FIRE) || pokemonType.equals(WATER) || pokemonType.equals(DRAGON))) {
 
             return 0.5;
 
@@ -190,8 +190,8 @@ public enum Type {
             return 2.0;
 
         } else if (moveType.equals(GRASS)
-                   && (pokemonType.equals(FLYING) || pokemonType.equals(POISON) || pokemonType.equals(BUG) || pokemonType.equals(STEEL)
-                       || pokemonType.equals(FIRE) || pokemonType.equals(GRASS) || pokemonType.equals(DRAGON))) {
+                && (pokemonType.equals(FLYING) || pokemonType.equals(POISON) || pokemonType.equals(BUG) || pokemonType.equals(STEEL)
+                || pokemonType.equals(FIRE) || pokemonType.equals(GRASS) || pokemonType.equals(DRAGON))) {
 
             return 0.5;
 
@@ -216,12 +216,12 @@ public enum Type {
             return 0.0;
 
         } else if (moveType.equals(ICE)
-                   && (pokemonType.equals(FLYING) || pokemonType.equals(GROUND) || pokemonType.equals(GRASS) || pokemonType.equals(DRAGON))) {
+                && (pokemonType.equals(FLYING) || pokemonType.equals(GROUND) || pokemonType.equals(GRASS) || pokemonType.equals(DRAGON))) {
 
             return 2.0;
 
         } else if (moveType.equals(ICE)
-                   && (pokemonType.equals(STEEL) || pokemonType.equals(FIRE) || pokemonType.equals(WATER) || pokemonType.equals(ICE))) {
+                && (pokemonType.equals(STEEL) || pokemonType.equals(FIRE) || pokemonType.equals(WATER) || pokemonType.equals(ICE))) {
 
             return 0.5;
 

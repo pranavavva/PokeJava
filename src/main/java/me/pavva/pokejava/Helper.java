@@ -1,14 +1,14 @@
 package me.pavva.pokejava;
 
 /**
- * A helper class which contains all the game logic. Setup logic is preserved 
+ * A helper class which contains all the game logic. Setup logic is preserved
  * in {@link me.pavva.pokejava.App App}. Variables are statically referenced
  * to {@link me.pavva.pokejava.App App}.
- * 
+ *
  * @see me.pavva.pokejava.App
  */
 public class Helper {
-    
+
     /**
      * A static method which contains the code for the user's game turn.
      */
@@ -33,8 +33,8 @@ public class Helper {
                 for (Pokemon p : App.poke) {
 
                     System.out.print(p.getName() + " is of type " + p.getType() + ". It has " + p.getHealth()
-                                     + " health points and it knows " + p.getMove1().getName() + ", " + p.getMove2().getName() + ", "
-                                     + p.getMove3().getName() + ", " + p.getMove4().getName() + ".\n");
+                            + " health points and it knows " + p.getMove1().getName() + ", " + p.getMove2().getName() + ", "
+                            + p.getMove3().getName() + ", " + p.getMove4().getName() + ".\n");
                 }
 
                 System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
@@ -51,17 +51,17 @@ public class Helper {
                     App.sc.close();
                     System.gc();
                     throw new IllegalArgumentException("\n\n" + App.ANSI_RESET + App.ANSI_RED + "Please pick an integer between 1 and "
-                                                       + App.poke.size() + ", inclusive.\n" + App.ANSI_RESET);
+                            + App.poke.size() + ", inclusive.\n" + App.ANSI_RESET);
                 }
                 break;
 
             default:
                 throw new IllegalArgumentException("\n\n" + App.ANSI_RESET + App.ANSI_RED
-                                                   + "Please select an integer between 1 and 5, inclusive." + App.ANSI_RESET);
+                        + "Please select an integer between 1 and 5, inclusive." + App.ANSI_RESET);
         }
     }
-    
-    
+
+
     /**
      * A static method which contains the code for the CPU's game turn
      */
@@ -90,10 +90,10 @@ public class Helper {
         }
         System.out.println(App.ANSI_GREEN);
     }
-    
+
     /**
      * A static method which checks the health value of each pokemon to determine the winner.
-     * This is done by checking if a pokemon's health is at or below zero, whilst the other's 
+     * This is done by checking if a pokemon's health is at or below zero, whilst the other's
      * health value is above 0. If neither pokemon's health value is at or below 0, the game
      * continues.
      */
@@ -120,12 +120,12 @@ public class Helper {
      */
     static void moveList() {
         System.out.println(App.yourPoke.getName() + " knows\n1 - " + App.yourPoke.getMove1().getName() + "\t2 - "
-                           + App.yourPoke.getMove2().getName() + "\n3 - " + App.yourPoke.getMove3().getName() + "\t4 - "
-                           + App.yourPoke.getMove4().getName() + App.ANSI_GREEN);
+                + App.yourPoke.getMove2().getName() + "\n3 - " + App.yourPoke.getMove3().getName() + "\t4 - "
+                + App.yourPoke.getMove4().getName() + App.ANSI_GREEN);
         System.out.print("Type the number corresponding to the move you would like " + App.yourPoke.getName()
-                         + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
+                + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
     }
-    
+
     /**
      * Lists the amount of health each pokemon has left. Used at the beginning of each turn.
      */

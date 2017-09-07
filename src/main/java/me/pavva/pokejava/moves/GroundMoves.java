@@ -1,6 +1,7 @@
 package me.pavva.pokejava.moves;
 
-import me.pavva.pokejava.*;
+import me.pavva.pokejava.Move;
+import me.pavva.pokejava.Type;
 
 
 public class GroundMoves {

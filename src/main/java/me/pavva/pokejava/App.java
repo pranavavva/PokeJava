@@ -13,11 +13,11 @@ import me.pavva.pokejava.pokemon.*;
  *
  * @author Pranav Avva   Github: 20avva    Web: <a href="https://20avva.github.io">20avva.github.io</a>
  * @version 4.1
- * @since Java 1.7
  * @see me.pavva.pokejava.Pokemon
  * @see me.pavva.pokejava.Type
  * @see me.pavva.pokejava.Move
  * @see me.pavva.pokejava.Helper
+ * @since Java 1.7
  */
 @SuppressWarnings("unused")
 public class App {
@@ -67,7 +67,7 @@ public class App {
     static Pokemon opponentPoke = new Pokemon();
 
     static int decision = 0;
-    //  static int                           newYourPick            = 0;
+    //  static int newYourPick = 0;
     static int opponentDecision = 0;
     static ArrayList<Pokemon> poke = new ArrayList<Pokemon>();
 
@@ -144,6 +144,7 @@ public class App {
 
         System.gc();
         sc.close();
+        System.exit(0);
 
     } //END MAIN METHOD
 
