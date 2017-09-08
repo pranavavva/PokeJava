@@ -48,7 +48,7 @@ public class App {
     static final String ANSI_GREEN = "\u001B[32m";
     static final String ANSI_YELLOW = "\u001B[33m";
     static final String ANSI_BLUE = "\u001B[34m";
-    private static final String ANSI_PURPLE = "\u001B[35m";
+    static final String ANSI_PURPLE = "\u001B[35m";
     static final String ANSI_CYAN = "\u001B[36m";
     static final String ANSI_WHITE = "\u001B[37m";
 
