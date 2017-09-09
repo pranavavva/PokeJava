@@ -4,8 +4,6 @@ package me.pavva.pokejava;
 
 
 /**
- * me.pavva.pokejava.Type
- * <p>
  * <p>An enum containing all 17 types in the Pokemon world. It also contains two
  * methods, one for checking Same-Type-Attack-Bonus (STAB), and one for check
  * effectivity.</p>

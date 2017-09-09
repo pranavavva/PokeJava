@@ -1,12 +1,10 @@
 package me.pavva.pokejava;
 
-import java.util.*;
+import java.util.ArrayList;
 
 // TODO: Testing
 
 /**
- * me.pavva.pokejava.Pokemon
- * <p>
  * The class file which contains the constructor, get-set methods
  *
  * @author Pranav A.   Github: 20avva
@@ -27,7 +25,7 @@ public class Pokemon { //Pokemon Object Constructors and get-set methods
     private final Move move4;
 
     /**
-     * Pokemon object constuctor with params passed in
+     * Pokemon object constructor with params passed in
      *
      * @param name    The String name of the Pokemon. Seen only by the user.
      * @param type    The Type of the Pokemon.

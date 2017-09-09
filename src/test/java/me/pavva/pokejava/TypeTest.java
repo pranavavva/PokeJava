@@ -1,15 +1,22 @@
 package me.pavva.pokejava;
 
-import me.pavva.pokejava.Move;
-import me.pavva.pokejava.Pokemon;
-import me.pavva.pokejava.Type;
-
 import org.junit.*;
 
+/**
+ * Tests {@link me.pavva.pokejava.Type Type.java} for proper method returns.
+ *
+ * @author Pranav Avva   Github: 20avva    Web: <a href="https://20avva.github.io">20avva.github.io</a>
+ * @version 4.1
+ * @since Java 1.7
+ */
 public class TypeTest {
-    
+
+    /**
+     * Tests {@link me.pavva.pokejava.Type#doStabCheck(Move, Pokemon) doStabCheck()} to make sure proper STAB values are
+     * being returned.
+     */
     @Test
-    public void testDoStabCheck() {
+    public void doStabCheck() {
         Move move1 = new Move("move1", Type.NORMAL, 85, 20);
         Move move2 = new Move("move1", Type.NORMAL, 85, 20);
         Move move3 = new Move("move1", Type.NORMAL, 85, 20);
@@ -27,9 +34,13 @@ public class TypeTest {
         
         Assert.assertEquals(stabValue2, 1.0, 0.1);
     }
-    
+
+    /**
+     * Tests {@link me.pavva.pokejava.Type#doEffectCheck(Move, Pokemon) doEffectCheck()} to make sure proper effectivity
+     * values are being returned.
+     */
     @Test
-    public void testDoEffeftCheck() {
+    public void doEffectCheck() {
         Move moveFire = new Move("FireMove", Type.FIRE, 85, 20);
         Move moveWater = new Move("WaterMove", Type.WATER, 85, 20);
         Move moveGrass = new Move("GrassMove", Type.GRASS, 85, 20);

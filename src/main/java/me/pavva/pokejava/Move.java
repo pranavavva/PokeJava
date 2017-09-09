@@ -1,11 +1,8 @@
 package me.pavva.pokejava;
 
-
 // TODO: Testing and Javadoc
 
 /**
- * me.pavva.pokejava.Move
- * <p>
  * A class which contains a Move constuctor, the get-set methods for the
  * associated variables, and the Damage Calculator. The Damage Calulator uses
  * methods in me.pavva.pokejava.Type
