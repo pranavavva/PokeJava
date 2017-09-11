@@ -24,5 +24,7 @@ public class IcePokemon {
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
 
-    public Pokemon avalugg = new Pokemon("Avalugg", Type.ICE, 394.0, 366, 513, normal.skullBash, dark.bite, ice.blizzard, ice.iceBall);
+    private Pokemon avalugg = new Pokemon("Avalugg", Type.ICE, 394.0, 366, 513, normal.skullBash, dark.bite, ice.blizzard, ice.iceBall);
+
+    public Pokemon[] p = {avalugg};
 }

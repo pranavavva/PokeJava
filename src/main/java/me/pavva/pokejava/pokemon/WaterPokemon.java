@@ -24,6 +24,9 @@ public class WaterPokemon {
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
 
-    public Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, steel.flashCannon, water.waterPulse, dark.bite,
+    private Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, steel.flashCannon, water.waterPulse, dark.bite,
             water.hydroPump);
+
+
+    public Pokemon[] p = {blastoise};
 }

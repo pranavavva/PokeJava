@@ -1,5 +1,6 @@
 package me.pavva.pokejava.pokemon;
 
+import me.pavva.pokejava.Pokemon;
 import me.pavva.pokejava.moves.*;
 
 public class GhostPokemon {
@@ -21,4 +22,6 @@ public class GhostPokemon {
     private RockMoves rock = new RockMoves();
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
+
+    public Pokemon[] p = {};
 }

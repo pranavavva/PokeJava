@@ -1,7 +1,6 @@
 package me.pavva.pokejava.pokemon;
 
-import me.pavva.pokejava.Pokemon;
-import me.pavva.pokejava.Type;
+import me.pavva.pokejava.*;
 import me.pavva.pokejava.moves.*;
 
 public class GrassPokemon {
@@ -19,10 +18,13 @@ public class GrassPokemon {
     private IceMoves ice = new IceMoves();
     private NormalMoves normal = new NormalMoves();
     private PoisonMoves poison = new PoisonMoves();
-    public Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, grass.petalDance, grass.solarBeam,
-            poison.sludgeBomb, ground.earthquake);
     private PsychicMoves psychic = new PsychicMoves();
     private RockMoves rock = new RockMoves();
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
+
+    private Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, grass.petalDance, grass.solarBeam,
+            poison.sludgeBomb, ground.earthquake);
+
+    public Pokemon[] p = {venusaur};
 }

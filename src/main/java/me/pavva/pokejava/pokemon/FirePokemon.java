@@ -14,8 +14,6 @@ public class FirePokemon {
     private FightMoves flight = new FightMoves();
     private FireMoves fire = new FireMoves();
     private FlyingMoves flying = new FlyingMoves();
-    public Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, flying.wingAttack, fire.flareBlitz,
-            fire.heatWave, dragon.dragonClaw);
     private GhostMoves ghost = new GhostMoves();
     private GrassMoves grass = new GrassMoves();
     private GroundMoves ground = new GroundMoves();
@@ -26,4 +24,9 @@ public class FirePokemon {
     private RockMoves rock = new RockMoves();
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
+
+    private Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, flying.wingAttack, fire.flareBlitz,
+            fire.heatWave, dragon.dragonClaw);
+
+    public Pokemon[] p = {};
 }

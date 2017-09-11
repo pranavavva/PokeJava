@@ -1,5 +1,7 @@
 package me.pavva.pokejava.pokemon;
 
+import me.pavva.pokejava.Pokemon;
+import me.pavva.pokejava.Type;
 import me.pavva.pokejava.moves.*;
 
 public class FairyPokemon {
@@ -21,4 +23,8 @@ public class FairyPokemon {
     private RockMoves rock = new RockMoves();
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
+
+    private Pokemon clefable = new Pokemon("Clefable", Type.FAIRY, 394, 262, 269, fairy.disarmingVoice, psychic.psyshock, ice.blizzard, electric.thunderbolt);
+
+    public Pokemon[] p = {clefable};
 }

@@ -1,12 +1,8 @@
 package me.pavva.pokejava;
 
-import java.util.Scanner; // User input
-import java.util.Random; // Random numbers
-import java.util.ArrayList;
-
-// import me.pavva.pokejava.moves.*;
-
 import me.pavva.pokejava.pokemon.*;
+
+import java.util.*;
 
 /**
  * Entry point to Pokemon Battle Simulator
@@ -22,27 +18,27 @@ import me.pavva.pokejava.pokemon.*;
 @SuppressWarnings("unused")
 public class App {
 
-    private static final BugPokemon bug = new BugPokemon();
-    private static final DarkPokemon dark = new DarkPokemon();
-    private static final DragonPokemon dragon = new DragonPokemon();
-    private static final ElectricPokemon electric = new ElectricPokemon();
-    private static final FairyPokemon fairy = new FairyPokemon();
-    private static final FightPokemon flight = new FightPokemon();
-    private static final FirePokemon fire = new FirePokemon();
-    private static final FlyingPokemon flying = new FlyingPokemon();
-    private static final GhostPokemon ghost = new GhostPokemon();
-    private static final GrassPokemon grass = new GrassPokemon();
-    private static final GroundPokemon ground = new GroundPokemon();
-    private static final IcePokemon ice = new IcePokemon();
-    private static final NormalPokemon normal = new NormalPokemon();
-    private static final PoisonPokemon poison = new PoisonPokemon();
-    private static final PsychicPokemon psychic = new PsychicPokemon();
-    private static final RockPokemon rock = new RockPokemon();
-    private static final SteelPokemon steel = new SteelPokemon();
-    private static final WaterPokemon water = new WaterPokemon();
+    private static final BugPokemon Bug = new BugPokemon();
+    private static final DarkPokemon Dark = new DarkPokemon();
+    private static final DragonPokemon Dragon = new DragonPokemon();
+    private static final ElectricPokemon Electric = new ElectricPokemon();
+    private static final FairyPokemon Fairy = new FairyPokemon();
+    private static final FightPokemon Fight = new FightPokemon();
+    private static final FirePokemon Fire = new FirePokemon();
+    private static final FlyingPokemon Flying = new FlyingPokemon();
+    private static final GhostPokemon Ghost = new GhostPokemon();
+    private static final GrassPokemon Grass = new GrassPokemon();
+    private static final GroundPokemon Ground = new GroundPokemon();
+    private static final IcePokemon Ice = new IcePokemon();
+    private static final NormalPokemon Normal = new NormalPokemon();
+    private static final PoisonPokemon Poison = new PoisonPokemon();
+    private static final PsychicPokemon Psychic = new PsychicPokemon();
+    private static final RockPokemon Rock = new RockPokemon();
+    private static final SteelPokemon Steel = new SteelPokemon();
+    private static final WaterPokemon Water = new WaterPokemon();
 
 
-    static final String ANSI_RESET = "\u001B[0m";             // ANSI Color Codes
+    static final String ANSI_RESET = "\u001B[0m"; // ANSI Color Codes
     static final String ANSI_BLACK = "\u001B[30m";
     static final String ANSI_RED = "\u001B[31m";
     static final String ANSI_GREEN = "\u001B[32m";
@@ -52,7 +48,7 @@ public class App {
     static final String ANSI_CYAN = "\u001B[36m";
     static final String ANSI_WHITE = "\u001B[37m";
 
-    static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";            // ANSI Background Color Codes
+    static final String ANSI_BLACK_BACKGROUND = "\u001B[40m"; // ANSI Background Color Codes
     static final String ANSI_RED_BACKGROUND = "\u001B[41m";
     static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
     static final String ANSI_YELLOW_BACKGROUND = "\u001B[43m";
@@ -62,12 +58,11 @@ public class App {
     static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
     static Scanner sc = new Scanner(System.in);  // Used for User Input
-    static Random rand = new Random();            // Random Numbers for CPU move selection
+    static Random rand = new Random();           // Random Numbers for CPU move selection
     static Pokemon yourPoke = new Pokemon();
     static Pokemon opponentPoke = new Pokemon();
 
     static int decision = 0;
-    //  static int newYourPick = 0;
     static int opponentDecision = 0;
     static ArrayList<Pokemon> poke = new ArrayList<Pokemon>();
 
@@ -82,11 +77,30 @@ public class App {
         int yourPick;
         int opponentPick;
 
-        poke.add(fire.charizard);
-        poke.add(water.blastoise);
-        poke.add(grass.venusaur);
-        poke.add(ice.avalugg);
-        poke.add(poison.muk);
+        poke.addAll(Arrays.asList(Bug.p));
+        poke.addAll(Arrays.asList(Dark.p));
+        poke.addAll(Arrays.asList(Dragon.p));
+        poke.addAll(Arrays.asList(Electric.p));
+        poke.addAll(Arrays.asList(Fairy.p));
+        poke.addAll(Arrays.asList(Fight.p));
+        poke.addAll(Arrays.asList(Fire.p));
+        poke.addAll(Arrays.asList(Flying.p));
+        poke.addAll(Arrays.asList(Ghost.p));
+        poke.addAll(Arrays.asList(Grass.p));
+        poke.addAll(Arrays.asList(Ground.p));
+        poke.addAll(Arrays.asList(Ice.p));
+        poke.addAll(Arrays.asList(Normal.p));
+        poke.addAll(Arrays.asList(Poison.p));
+        poke.addAll(Arrays.asList(Psychic.p));
+        poke.addAll(Arrays.asList(Rock.p));
+        poke.addAll(Arrays.asList(Steel.p));
+        poke.addAll(Arrays.asList(Water.p));
+
+        Collections.sort(poke, new Comparator<Pokemon>() {
+            public int compare(Pokemon p1, Pokemon p2) {
+                return p1.getType().compareTo(p2.getType());
+            }
+        });
 
         System.out.println(ANSI_GREEN);
 

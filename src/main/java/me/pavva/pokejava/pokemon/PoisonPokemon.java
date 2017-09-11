@@ -19,9 +19,12 @@ public class PoisonPokemon {
     private IceMoves ice = new IceMoves();
     private NormalMoves normal = new NormalMoves();
     private PoisonMoves poison = new PoisonMoves();
-    public Pokemon muk = new Pokemon("Muk", Type.POISON, 414.0, 339, 273, poison.gunkShot, normal.pound, ground.mudBomb, poison.sludgeBomb);
     private PsychicMoves psychic = new PsychicMoves();
     private RockMoves rock = new RockMoves();
     private SteelMoves steel = new SteelMoves();
     private WaterMoves water = new WaterMoves();
+
+    private Pokemon muk = new Pokemon("Muk", Type.POISON, 414.0, 339, 273, poison.gunkShot, normal.pound, ground.mudBomb, poison.sludgeBomb);
+
+    public Pokemon[] p = {muk};
 }
