@@ -28,5 +28,5 @@ public class FirePokemon {
     private Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, flying.wingAttack, fire.flareBlitz,
             fire.heatWave, dragon.dragonClaw);
 
-    public Pokemon[] p = {};
+    public Pokemon[] p = {charizard};
 }

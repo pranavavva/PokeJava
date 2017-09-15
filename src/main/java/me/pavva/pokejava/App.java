@@ -15,7 +15,6 @@ import java.util.*;
  * @see me.pavva.pokejava.Helper
  * @since Java 1.7
  */
-@SuppressWarnings("unused")
 public class App {
 
     private static final BugPokemon Bug = new BugPokemon();
@@ -36,26 +35,6 @@ public class App {
     private static final RockPokemon Rock = new RockPokemon();
     private static final SteelPokemon Steel = new SteelPokemon();
     private static final WaterPokemon Water = new WaterPokemon();
-
-
-    static final String ANSI_RESET = "\u001B[0m"; // ANSI Color Codes
-    static final String ANSI_BLACK = "\u001B[30m";
-    static final String ANSI_RED = "\u001B[31m";
-    static final String ANSI_GREEN = "\u001B[32m";
-    static final String ANSI_YELLOW = "\u001B[33m";
-    static final String ANSI_BLUE = "\u001B[34m";
-    static final String ANSI_PURPLE = "\u001B[35m";
-    static final String ANSI_CYAN = "\u001B[36m";
-    static final String ANSI_WHITE = "\u001B[37m";
-
-    static final String ANSI_BLACK_BACKGROUND = "\u001B[40m"; // ANSI Background Color Codes
-    static final String ANSI_RED_BACKGROUND = "\u001B[41m";
-    static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
-    static final String ANSI_YELLOW_BACKGROUND = "\u001B[43m";
-    static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
-    static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
-    static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
-    static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
     static Scanner sc = new Scanner(System.in);  // Used for User Input
     static Random rand = new Random();           // Random Numbers for CPU move selection
@@ -102,8 +81,6 @@ public class App {
             }
         });
 
-        System.out.println(ANSI_GREEN);
-
         int k = 1;
         // BEGIN POKEMON SELECTION BLOCK
         for (Pokemon p : poke) {
@@ -119,8 +96,6 @@ public class App {
         yourPick = sc.nextInt();
         opponentPick = rand.nextInt(poke.size());
 
-        System.out.println(ANSI_BLUE);
-
         if (yourPick <= poke.size() && yourPick > 0) {
 
             yourPoke = poke.get(yourPick - 1);
@@ -132,11 +107,10 @@ public class App {
 
             sc.close();
             System.gc();
-            throw new IllegalArgumentException("\n\n" + ANSI_RESET + ANSI_RED + "Please pick an integer between 1 and " + poke.size()
-                    + ", inclusive.\n" + ANSI_RESET);
+            throw new IllegalArgumentException("\n\n" + "Please pick an integer between 1 and " + poke.size()
+                    + ", inclusive.\n");
         }
-
-        System.out.println(ANSI_RESET + ANSI_PURPLE);
+        
         // END POKEMON SELECTION BLOCK
 
         // BEGIN GAME WHILE LOOP

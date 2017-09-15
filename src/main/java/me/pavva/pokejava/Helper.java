@@ -50,14 +50,14 @@ public class Helper {
 
                     App.sc.close();
                     System.gc();
-                    throw new IllegalArgumentException("\n\n" + App.ANSI_RESET + App.ANSI_RED + "Please pick an integer between 1 and "
-                            + App.poke.size() + ", inclusive.\n" + App.ANSI_RESET);
+                    throw new IllegalArgumentException("\n\n" + "Please pick an integer between 1 and "
+                            + App.poke.size() + ", inclusive.\n");
                 }
                 break;
 
             default:
-                throw new IllegalArgumentException("\n\n" + App.ANSI_RESET + App.ANSI_RED
-                        + "Please select an integer between 1 and 5, inclusive." + App.ANSI_RESET);
+                throw new IllegalArgumentException("\n\n"
+                        + "Please select an integer between 1 and 5, inclusive.");
         }
     }
 
@@ -68,8 +68,6 @@ public class Helper {
     static void opponentMove() {
 
         App.opponentDecision = App.rand.nextInt(4);
-
-        System.out.println(App.ANSI_RED);
         switch (App.opponentDecision) {
             case 0:
                 Move.attack(App.opponentPoke, App.yourPoke, App.opponentPoke.getMove1());
@@ -88,7 +86,6 @@ public class Helper {
                 System.out.println(App.opponentPoke.getName() + " used " + App.opponentPoke.getMove4().getName());
                 break;
         }
-        System.out.println(App.ANSI_GREEN);
     }
 
     /**
@@ -121,7 +118,7 @@ public class Helper {
     static void moveList() {
         System.out.println(App.yourPoke.getName() + " knows\n1 - " + App.yourPoke.getMove1().getName() + "\t2 - "
                 + App.yourPoke.getMove2().getName() + "\n3 - " + App.yourPoke.getMove3().getName() + "\t4 - "
-                + App.yourPoke.getMove4().getName() + App.ANSI_GREEN);
+                + App.yourPoke.getMove4().getName());
         System.out.print("Type the number corresponding to the move you would like " + App.yourPoke.getName()
                 + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
     }
@@ -130,7 +127,7 @@ public class Helper {
      * Lists the amount of health each pokemon has left. Used at the beginning of each turn.
      */
     static void infoUpdate() {
-        System.out.println(App.ANSI_BLUE + App.yourPoke.getName() + " has " + App.yourPoke.getHealth() + " health left.");
+        System.out.println(App.yourPoke.getName() + " has " + App.yourPoke.getHealth() + " health left.");
         System.out.println("The foe's " + App.opponentPoke.getName() + " has " + App.opponentPoke.getHealth() + " health left.\n");
     }
 }
