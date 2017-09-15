@@ -94,6 +94,7 @@ public class App {
 
         System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
         yourPick = sc.nextInt();
+        System.out.println("\n");
         opponentPick = rand.nextInt(poke.size());
 
         if (yourPick <= poke.size() && yourPick > 0) {

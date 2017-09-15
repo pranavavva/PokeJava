@@ -14,6 +14,7 @@ public class Helper {
      */
     static void yourMove() {
         App.decision = App.sc.nextInt();
+        System.out.println("\n");
 
         switch (App.decision) {
             case 1:
