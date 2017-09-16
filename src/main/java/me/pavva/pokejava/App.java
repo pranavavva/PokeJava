@@ -18,44 +18,24 @@ import java.util.*;
 @SuppressWarnings("unused")
 public class App {
 
-    private static final BugPokemon Bug = new BugPokemon();
-    private static final DarkPokemon Dark = new DarkPokemon();
-    private static final DragonPokemon Dragon = new DragonPokemon();
-    private static final ElectricPokemon Electric = new ElectricPokemon();
-    private static final FairyPokemon Fairy = new FairyPokemon();
-    private static final FightPokemon Fight = new FightPokemon();
-    private static final FirePokemon Fire = new FirePokemon();
-    private static final FlyingPokemon Flying = new FlyingPokemon();
-    private static final GhostPokemon Ghost = new GhostPokemon();
-    private static final GrassPokemon Grass = new GrassPokemon();
-    private static final GroundPokemon Ground = new GroundPokemon();
-    private static final IcePokemon Ice = new IcePokemon();
-    private static final NormalPokemon Normal = new NormalPokemon();
-    private static final PoisonPokemon Poison = new PoisonPokemon();
-    private static final PsychicPokemon Psychic = new PsychicPokemon();
-    private static final RockPokemon Rock = new RockPokemon();
-    private static final SteelPokemon Steel = new SteelPokemon();
-    private static final WaterPokemon Water = new WaterPokemon();
-
-
-    static final String ANSI_RESET = "\u001B[0m"; // ANSI Color Codes
-    static final String ANSI_BLACK = "\u001B[30m";
-    static final String ANSI_RED = "\u001B[31m";
-    static final String ANSI_GREEN = "\u001B[32m";
-    static final String ANSI_YELLOW = "\u001B[33m";
-    static final String ANSI_BLUE = "\u001B[34m";
-    static final String ANSI_PURPLE = "\u001B[35m";
-    static final String ANSI_CYAN = "\u001B[36m";
-    static final String ANSI_WHITE = "\u001B[37m";
-
-    static final String ANSI_BLACK_BACKGROUND = "\u001B[40m"; // ANSI Background Color Codes
-    static final String ANSI_RED_BACKGROUND = "\u001B[41m";
-    static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
-    static final String ANSI_YELLOW_BACKGROUND = "\u001B[43m";
-    static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
-    static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
-    static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
-    static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+    private static final BugPokemon BUG = new BugPokemon();
+    private static final DarkPokemon DARK = new DarkPokemon();
+    private static final DragonPokemon DRAGON = new DragonPokemon();
+    private static final ElectricPokemon ELECTRIC = new ElectricPokemon();
+    private static final FairyPokemon FAIRY = new FairyPokemon();
+    private static final FightPokemon FIGHT = new FightPokemon();
+    private static final FirePokemon FIRE = new FirePokemon();
+    private static final FlyingPokemon FLYING = new FlyingPokemon();
+    private static final GhostPokemon GHOST = new GhostPokemon();
+    private static final GrassPokemon GRASS = new GrassPokemon();
+    private static final GroundPokemon GROUND = new GroundPokemon();
+    private static final IcePokemon ICE = new IcePokemon();
+    private static final NormalPokemon NORMAL = new NormalPokemon();
+    private static final PoisonPokemon POISON = new PoisonPokemon();
+    private static final PsychicPokemon PSYCHIC = new PsychicPokemon();
+    private static final RockPokemon ROCK = new RockPokemon();
+    private static final SteelPokemon STEEL = new SteelPokemon();
+    private static final WaterPokemon WATER = new WaterPokemon();
 
     static Scanner sc = new Scanner(System.in);  // Used for User Input
     static Random rand = new Random();           // Random Numbers for CPU move selection
@@ -77,32 +57,30 @@ public class App {
         int yourPick;
         int opponentPick;
 
-        poke.addAll(Arrays.asList(Bug.p));
-        poke.addAll(Arrays.asList(Dark.p));
-        poke.addAll(Arrays.asList(Dragon.p));
-        poke.addAll(Arrays.asList(Electric.p));
-        poke.addAll(Arrays.asList(Fairy.p));
-        poke.addAll(Arrays.asList(Fight.p));
-        poke.addAll(Arrays.asList(Fire.p));
-        poke.addAll(Arrays.asList(Flying.p));
-        poke.addAll(Arrays.asList(Ghost.p));
-        poke.addAll(Arrays.asList(Grass.p));
-        poke.addAll(Arrays.asList(Ground.p));
-        poke.addAll(Arrays.asList(Ice.p));
-        poke.addAll(Arrays.asList(Normal.p));
-        poke.addAll(Arrays.asList(Poison.p));
-        poke.addAll(Arrays.asList(Psychic.p));
-        poke.addAll(Arrays.asList(Rock.p));
-        poke.addAll(Arrays.asList(Steel.p));
-        poke.addAll(Arrays.asList(Water.p));
+        poke.addAll(Arrays.asList(BUG.p));
+        poke.addAll(Arrays.asList(DARK.p));
+        poke.addAll(Arrays.asList(DRAGON.p));
+        poke.addAll(Arrays.asList(ELECTRIC.p));
+        poke.addAll(Arrays.asList(FAIRY.p));
+        poke.addAll(Arrays.asList(FIGHT.p));
+        poke.addAll(Arrays.asList(FIRE.p));
+        poke.addAll(Arrays.asList(FLYING.p));
+        poke.addAll(Arrays.asList(GHOST.p));
+        poke.addAll(Arrays.asList(GRASS.p));
+        poke.addAll(Arrays.asList(GROUND.p));
+        poke.addAll(Arrays.asList(ICE.p));
+        poke.addAll(Arrays.asList(NORMAL.p));
+        poke.addAll(Arrays.asList(POISON.p));
+        poke.addAll(Arrays.asList(PSYCHIC.p));
+        poke.addAll(Arrays.asList(ROCK.p));
+        poke.addAll(Arrays.asList(STEEL.p));
+        poke.addAll(Arrays.asList(WATER.p));
 
         Collections.sort(poke, new Comparator<Pokemon>() {
             public int compare(Pokemon p1, Pokemon p2) {
                 return p1.getType().compareTo(p2.getType());
             }
         });
-
-        System.out.println(ANSI_GREEN);
 
         int k = 1;
         // BEGIN POKEMON SELECTION BLOCK
@@ -119,8 +97,6 @@ public class App {
         yourPick = sc.nextInt();
         opponentPick = rand.nextInt(poke.size());
 
-        System.out.println(ANSI_BLUE);
-
         if (yourPick <= poke.size() && yourPick > 0) {
 
             yourPoke = poke.get(yourPick - 1);
@@ -132,11 +108,9 @@ public class App {
 
             sc.close();
             System.gc();
-            throw new IllegalArgumentException("\n\n" + ANSI_RESET + ANSI_RED + "Please pick an integer between 1 and " + poke.size()
-                    + ", inclusive.\n" + ANSI_RESET);
+            throw new IllegalArgumentException("\n\n" + "Please pick an integer between 1 and " + poke.size()
+                    + ", inclusive.\n");
         }
-
-        System.out.println(ANSI_RESET + ANSI_PURPLE);
         // END POKEMON SELECTION BLOCK
 
         // BEGIN GAME WHILE LOOP
@@ -163,3 +137,4 @@ public class App {
     } //END MAIN METHOD
 
 } // END APP.JAVA
+
