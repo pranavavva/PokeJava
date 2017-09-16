@@ -14,6 +14,7 @@ public class Helper {
      */
     static void yourMove() {
         App.decision = App.sc.nextInt();
+        System.out.println("\n");
 
         switch (App.decision) {
             case 1:
@@ -71,7 +72,6 @@ public class Helper {
     static void opponentMove() {
 
         App.opponentDecision = App.rand.nextInt(4);
-
         switch (App.opponentDecision) {
             case 0:
                 Move.attack(App.opponentPoke, App.yourPoke, App.opponentPoke.getMove1());

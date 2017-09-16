@@ -15,7 +15,6 @@ import java.util.*;
  * @see me.pavva.pokejava.Helper
  * @since Java 1.7
  */
-@SuppressWarnings("unused")
 public class App {
 
     private static final BugPokemon BUG = new BugPokemon();
@@ -95,6 +94,7 @@ public class App {
 
         System.out.print("\nChoose the number that corresponds to the Pokemon you would like to play with in the list above.\n>> ");
         yourPick = sc.nextInt();
+        System.out.println("\n");
         opponentPick = rand.nextInt(poke.size());
 
         if (yourPick <= poke.size() && yourPick > 0) {
