@@ -2,8 +2,6 @@ package me.pavva.pokejava;
 
 import java.util.ArrayList;
 
-// TODO: Testing
-
 /**
  * The class file which contains the constructor, get-set methods
  *
@@ -13,16 +11,16 @@ import java.util.ArrayList;
  */
 public class Pokemon { //Pokemon Object Constructors and get-set methods
 
-    private final String name;
-    private final Type type;
-    private double health;
-    private final int attack;
-    private final int defense;
+    private final String    name;
+    private final Type      type;
+    private double          health;
+    private final int       attack;
+    private final int       defense;
     private ArrayList<Move> moveList;
-    private final Move move1;
-    private final Move move2;
-    private final Move move3;
-    private final Move move4;
+    private final Move      move1;
+    private final Move      move2;
+    private final Move      move3;
+    private final Move      move4;
 
     /**
      * Pokemon object constructor with params passed in

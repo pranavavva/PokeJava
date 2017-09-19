@@ -1,7 +1,5 @@
 package me.pavva.pokejava;
 
-// TODO: Testing and Javadoc
-
 /**
  * A class which contains a Move constuctor, the get-set methods for the
  * associated variables, and the Damage Calculator. The Damage Calulator uses
@@ -14,9 +12,9 @@ package me.pavva.pokejava;
 public class Move {
 
     private final String name;
-    private final Type type;
-    private final int power;
-    private int points;
+    private final Type   type;
+    private final int    power;
+    private int          points;
 
     /**
      * Constructor for a Move Object. The power and points values are taken from Bulbapedia and Smogon Pokedex

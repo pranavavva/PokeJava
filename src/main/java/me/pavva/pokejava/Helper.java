@@ -36,8 +36,8 @@ public class Helper {
                 for (Pokemon p : App.poke) {
 
                     System.out.print(k + " - " + p.getName() + " is of type " + p.getType() + ". It has " + p.getHealth()
-                            + " health points and it knows " + p.getMove1().getName() + ", " + p.getMove2().getName() + ", "
-                            + p.getMove3().getName() + ", " + p.getMove4().getName() + ".\n");
+                                     + " health points and it knows " + p.getMove1().getName() + ", " + p.getMove2().getName() + ", "
+                                     + p.getMove3().getName() + ", " + p.getMove4().getName() + ".\n");
                     k++;
                 }
 
@@ -54,14 +54,13 @@ public class Helper {
 
                     App.sc.close();
                     System.gc();
-                    throw new IllegalArgumentException("\n\n" + "Please pick an integer between 1 and "
-                            + App.poke.size() + ", inclusive.\n");
+                    throw new IllegalArgumentException("\n\n" + "Please pick an integer between 1 and " + App.poke.size()
+                                                       + ", inclusive.\n");
                 }
                 break;
 
             default:
-                throw new IllegalArgumentException("\n\n"
-                        + "Please select an integer between 1 and 5, inclusive.");
+                throw new IllegalArgumentException("\n\n" + "Please select an integer between 1 and 5, inclusive.");
         }
     }
 
@@ -121,17 +120,17 @@ public class Helper {
      */
     static void moveList() {
         System.out.println(App.yourPoke.getName() + " knows\n1 - " + App.yourPoke.getMove1().getName() + "\t2 - "
-                + App.yourPoke.getMove2().getName() + "\n3 - " + App.yourPoke.getMove3().getName() + "\t4 - "
-                + App.yourPoke.getMove4().getName());
+                           + App.yourPoke.getMove2().getName() + "\n3 - " + App.yourPoke.getMove3().getName() + "\t4 - "
+                           + App.yourPoke.getMove4().getName());
         System.out.print("Type the number corresponding to the move you would like " + App.yourPoke.getName()
-                + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
+                         + " to use. Select '5' to switch out to a different Pokemon.\n>> ");
     }
 
     /**
      * Lists the amount of health each pokemon has left. Used at the beginning of each turn.
      */
     static void infoUpdate() {
-        System.out.println( App.yourPoke.getName() + " has " + App.yourPoke.getHealth() + " health left.");
+        System.out.println(App.yourPoke.getName() + " has " + App.yourPoke.getHealth() + " health left.");
         System.out.println("The foe's " + App.opponentPoke.getName() + " has " + App.opponentPoke.getHealth() + " health left.\n");
     }
 }
