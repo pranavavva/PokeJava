@@ -10,6 +10,6 @@ echo "==> checking out to master"
 git checkout master
 
 echo "==> Bootstrapping"
-bootstrap
+./bootstrap
 
 echo "==> Working directory cleaned, branch master checked out, dependencies installed."
