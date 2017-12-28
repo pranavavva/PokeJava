@@ -1,7 +1,0 @@
-#!/bin/bash
-
-echo "==> Bootstrapping"
-/bin/bash ./boostrap
-
-echo "==> Cleaning working directory"
-mvn clean
