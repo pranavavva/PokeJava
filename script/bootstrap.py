@@ -7,4 +7,4 @@ if (os.path.isfile('./pom.xml')):
 	sys("mvn dependency:resolve")
 
 print()
-print("Dependencies Installed")
+print("==> Dependencies Installed")

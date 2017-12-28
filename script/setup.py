@@ -17,6 +17,9 @@ while True:
 	else:
 		print("That's not an answer. Enter YES or NO")
 
+print("==> cleaning working directory")
+system("mvn clean")
+
 print("==> stashing changes")
 system("git stash")
 
