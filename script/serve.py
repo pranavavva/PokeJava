@@ -5,7 +5,7 @@ from os import system
 import sys
 
 print("==> Updating")
-system("python3 script/update.py")
+system("update.py")
 
 print("==> Snapcrafting")
 system("snapcraft")
