@@ -8,10 +8,10 @@ while True:
 	print("This script is to be used only to return the working directory to an initial clone state. Is this what you want? YOUR CHANGES WILL BE STASHED AND BRANCH MASTER WILl BE CHECKED OUT")
 
 	want_str = str(input("Yes or No?"))
-	if want_str.lower() == yes:
+	if want_str.lower() == "yes":
 		want = True
 		break
-	elif want_str.lower() == no:
+	elif want_str.lower() == "no":
 		want = False
 		sys.exit(0)
 	else:
