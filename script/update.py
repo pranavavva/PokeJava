@@ -5,7 +5,7 @@ from os import system
 import sys
 
 print("==> Bootstrapping")
-system("boostrap.py")
+system("python3 boostrap.py")
 
 print("==> Cleaning working directory")
 system("mvn clean")
