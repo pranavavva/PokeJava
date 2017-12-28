@@ -27,6 +27,6 @@ print("==> checking out to master")
 system("git checkout master")
 
 print("==> Bootstrapping")
-system("python3 bootstrap.py")
+system("python3 script/bootstrap.py")
 
 print("==> Working directory cleaned, branch master checked out, dependencies installed.")
