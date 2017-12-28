@@ -6,8 +6,8 @@ description: |
   graphical Java Swing implementation is in the works. The project is open-source and is available on GitHub
   at https://github.com/20avva/PokeJava.git.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: stable  # must be 'stable' to release into candidate/stable channels
+confinement: strict  # use 'strict' once you have the right plugs and slots
 
 apps:
   pokejava:
@@ -17,7 +17,7 @@ parts:
   pokejava:
     # See 'snapcraft plugins'
     plugin: maven
-    source: .
+    source: https://github.com/20avva/PokeJava.git
     build: |
       export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
       mvn clean test
