@@ -2,6 +2,7 @@
 [![CircleCI](https://circleci.com/gh/20avva/PokeJava.svg?style=svg)](https://circleci.com/gh/20avva/PokeJava)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Coverage Status](https://coveralls.io/repos/github/20avva/PokeJava/badge.svg)](https://coveralls.io/github/20avva/PokeJava)
+[![Snap Status](https://build.snapcraft.io/badge/20avva/PokeJava.svg)](https://build.snapcraft.io/user/20avva/PokeJava)
 
 # PokeJava
 
