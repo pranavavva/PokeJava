@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 snapcraft clean pokejava
 snapcraft
 sudo snap install pokejava_*_amd64.snap --devmode --dangerous
