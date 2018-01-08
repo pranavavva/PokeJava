@@ -17,7 +17,7 @@ or Command Prompt and type `java -jar PokeJavaApp-4.1.jar`. You need to be in th
 
 ## Snap
 ```bash
-sudo snap install snapd # Install snap support
+sudo apt install snapd # Install snap support
 snap find pokejava # Make sure pokejava is in the stable channel
 snap install pokejava # install the app
 pokejava # Run it! You may need to use `sudo`
