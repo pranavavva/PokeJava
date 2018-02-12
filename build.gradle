@@ -29,3 +29,8 @@ jar {
                    "Main-Class": "me.pavva.pokejava.App")
     }
 }
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = project.sourceSets.main.allJava
+}

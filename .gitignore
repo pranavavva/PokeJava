@@ -1,7 +1,7 @@
 ###IDEA###
 
 .idea/
-PokeJavaApp.iml
+*.iml
 docs/reference.md
 demos/*/parts/
 demos/*/prime/
