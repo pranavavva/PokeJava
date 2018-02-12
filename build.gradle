@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'me.pavva.PokeJava'
+version = '4.1.1'
+
+description = "PokeJava is a Pokemon Battle Simulator written in Java from scratch"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+repositories {
+    maven {
+        url "http://repo.maven.apache.org/maven2" 
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+}
+
+jar {
+    manifest {
+        attributes("Implementation-Title": "PokeJava",
+                   "Implementation-Version": version,
+                   "Main-Class": "me.pavva.pokejava.App")
+    }
+}
