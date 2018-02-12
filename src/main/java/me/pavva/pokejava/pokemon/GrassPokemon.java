@@ -21,9 +21,13 @@ import static me.pavva.pokejava.moves.RockMove.*;
 import static me.pavva.pokejava.moves.SteelMove.*;
 import static me.pavva.pokejava.moves.WaterMove.*;
 
-public class GrassPokemon {
+public class GrassPokemon extends Pokemon {
+    
+    public GrassPokemon(String name, double health, int attack, int defense, Move move1, Move move2, Move move3, Move move4) {
+        super(name, Type.GRASS, health, attack, defense, move1, move2, move3, move4);
+    }
 
-    private static Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, petalDance, solarBeam,
+    private static Pokemon venusaur = new GrassPokemon("Venusaur", 364.0, 289, 291, petalDance, solarBeam,
             sludgeBomb, earthquake);
 
     public static Pokemon[] p = {venusaur};

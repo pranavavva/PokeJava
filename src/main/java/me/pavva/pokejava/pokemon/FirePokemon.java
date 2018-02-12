@@ -1,7 +1,6 @@
 package me.pavva.pokejava.pokemon;
 
-import me.pavva.pokejava.Pokemon;
-import me.pavva.pokejava.Type;
+import me.pavva.pokejava.*;
 
 import static me.pavva.pokejava.moves.BugMove.*;
 import static me.pavva.pokejava.moves.DarkMove.*;
@@ -22,9 +21,13 @@ import static me.pavva.pokejava.moves.RockMove.*;
 import static me.pavva.pokejava.moves.SteelMove.*;
 import static me.pavva.pokejava.moves.WaterMove.*;
 
-public class FirePokemon {
+public class FirePokemon extends Pokemon {
     
-    private static Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, wingAttack, flareBlitz,
+    public FirePokemon(String name, double health, int attack, int defense, Move move1, Move move2, Move move3, Move move4) {
+        super(name, Type.FIRE, health, attack, defense, move1, move2, move3, move4);
+    }
+    
+    private static Pokemon charizard = new FirePokemon("Charizard", 360.0, 293, 280, wingAttack, flareBlitz,
             heatWave, dragonClaw);
 
     public static Pokemon[] p = {charizard};

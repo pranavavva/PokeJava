@@ -1,6 +1,6 @@
 package me.pavva.pokejava.pokemon;
 
-import me.pavva.pokejava.Pokemon;
+import me.pavva.pokejava.*;
 
 import static me.pavva.pokejava.moves.BugMove.*;
 import static me.pavva.pokejava.moves.DarkMove.*;
@@ -22,7 +22,11 @@ import static me.pavva.pokejava.moves.SteelMove.*;
 import static me.pavva.pokejava.moves.WaterMove.*;
 
 
-public class RockPokemon {
+public class RockPokemon extends Pokemon {
+
+    public RockPokemon(String name, double health, int attack, int defense, Move move1, Move move2, Move move3, Move move4) {
+        super(name, Type.ROCK, health, attack, defense, move1, move2, move3, move4);
+    }
 
     public static Pokemon[] p = {};
 }

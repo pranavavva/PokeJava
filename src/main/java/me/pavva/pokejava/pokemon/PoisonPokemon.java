@@ -1,7 +1,6 @@
 package me.pavva.pokejava.pokemon;
 
-import me.pavva.pokejava.Pokemon;
-import me.pavva.pokejava.Type;
+import me.pavva.pokejava.*;
 
 import static me.pavva.pokejava.moves.BugMove.*;
 import static me.pavva.pokejava.moves.DarkMove.*;
@@ -23,8 +22,13 @@ import static me.pavva.pokejava.moves.SteelMove.*;
 import static me.pavva.pokejava.moves.WaterMove.*;
 
 
-public class PoisonPokemon {
-    private static Pokemon muk = new Pokemon("Muk", Type.POISON, 414.0, 339, 273, gunkShot, pound, mudBomb, sludgeBomb);
+public class PoisonPokemon extends Pokemon {
+    
+    public PoisonPokemon(String name, double health, int attack, int defense, Move move1, Move move2, Move move3, Move move4) {
+        super(name, Type.POISON, health, attack, defense, move1, move2, move3, move4);
+    }
+    
+    private static Pokemon muk = new PoisonPokemon("Muk", 414.0, 339, 273, gunkShot, pound, mudBomb, sludgeBomb);
 
     public static Pokemon[] p = {muk};
 }

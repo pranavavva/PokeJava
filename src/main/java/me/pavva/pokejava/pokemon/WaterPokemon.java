@@ -1,7 +1,6 @@
 package me.pavva.pokejava.pokemon;
 
-import me.pavva.pokejava.Pokemon;
-import me.pavva.pokejava.Type;
+import me.pavva.pokejava.*;
 
 import static me.pavva.pokejava.moves.BugMove.*;
 import static me.pavva.pokejava.moves.DarkMove.*;
@@ -23,9 +22,13 @@ import static me.pavva.pokejava.moves.SteelMove.*;
 import static me.pavva.pokejava.moves.WaterMove.*;
 
 
-public class WaterPokemon {
+public class WaterPokemon extends Pokemon {
 
-    private static Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, flashCannon, waterPulse, bite,
+    public WaterPokemon(String name, double health, int attack, int defense, Move move1, Move move2, Move move3, Move move4) {
+        super(name, Type.WATER, health, attack, defense, move1, move2, move3, move4);
+    }
+    
+    private static Pokemon blastoise = new WaterPokemon("Blastoise", 362.0, 291, 328, flashCannon, waterPulse, bite,
             hydroPump);
 
 

@@ -1,34 +1,14 @@
 package me.pavva.pokejava;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
-import me.pavva.pokejava.pokemon.BugPokemon;
-import me.pavva.pokejava.pokemon.DarkPokemon;
-import me.pavva.pokejava.pokemon.DragonPokemon;
-import me.pavva.pokejava.pokemon.ElectricPokemon;
-import me.pavva.pokejava.pokemon.FairyPokemon;
-import me.pavva.pokejava.pokemon.FightPokemon;
-import me.pavva.pokejava.pokemon.FirePokemon;
-import me.pavva.pokejava.pokemon.FlyingPokemon;
-import me.pavva.pokejava.pokemon.GhostPokemon;
-import me.pavva.pokejava.pokemon.GrassPokemon;
-import me.pavva.pokejava.pokemon.GroundPokemon;
-import me.pavva.pokejava.pokemon.IcePokemon;
-import me.pavva.pokejava.pokemon.NormalPokemon;
-import me.pavva.pokejava.pokemon.PoisonPokemon;
-import me.pavva.pokejava.pokemon.PsychicPokemon;
-import me.pavva.pokejava.pokemon.RockPokemon;
-import me.pavva.pokejava.pokemon.SteelPokemon;
-import me.pavva.pokejava.pokemon.WaterPokemon;
+import me.pavva.pokejava.pokemon.*;
 
 
 /**
- * Entry point to Pokemon Battle Simulator. Contains game setup. Uses subroutines in {@link me.pavva.pokejava.Helper Helper.java} to seperate setup from logic.
+ * Entrypoint to Pokemon Battle Simulator.
+ * 
+ * Contains game setup. Uses subroutines in {@link me.pavva.pokejava.Helper Helper.java} to seperate setup from logic.
  *
  * @author Pranav Avva   Github: 20avva    Web: <a href="https://20avva.github.io">20avva.github.io</a>
  * @version 4.1
