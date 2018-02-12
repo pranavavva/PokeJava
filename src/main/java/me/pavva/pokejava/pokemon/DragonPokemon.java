@@ -1,27 +1,27 @@
 package me.pavva.pokejava.pokemon;
 
 import me.pavva.pokejava.Pokemon;
-import me.pavva.pokejava.moves.*;
+
+import static me.pavva.pokejava.moves.BugMove.*;
+import static me.pavva.pokejava.moves.DarkMove.*;
+import static me.pavva.pokejava.moves.DragonMove.*;
+import static me.pavva.pokejava.moves.ElectricMove.*;
+import static me.pavva.pokejava.moves.FairyMove.*;
+import static me.pavva.pokejava.moves.FightMove.*;
+import static me.pavva.pokejava.moves.FireMove.*;
+import static me.pavva.pokejava.moves.FlyingMove.*;
+import static me.pavva.pokejava.moves.GhostMove.*;
+import static me.pavva.pokejava.moves.GrassMove.*;
+import static me.pavva.pokejava.moves.GroundMove.*;
+import static me.pavva.pokejava.moves.IceMove.*;
+import static me.pavva.pokejava.moves.NormalMove.*;
+import static me.pavva.pokejava.moves.PoisonMove.*;
+import static me.pavva.pokejava.moves.PsychicMove.*;
+import static me.pavva.pokejava.moves.RockMove.*;
+import static me.pavva.pokejava.moves.SteelMove.*;
+import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class DragonPokemon {
-    private BugMoves bug = new BugMoves();
-    private DarkMoves dark = new DarkMoves();
-    private DragonMoves dragon = new DragonMoves();
-    private ElectricMoves electric = new ElectricMoves();
-    private FairyMoves fairy = new FairyMoves();
-    private FightMoves flight = new FightMoves();
-    private FireMoves fire = new FireMoves();
-    private FlyingMoves flying = new FlyingMoves();
-    private GhostMoves ghost = new GhostMoves();
-    private GrassMoves grass = new GrassMoves();
-    private GroundMoves ground = new GroundMoves();
-    private IceMoves ice = new IceMoves();
-    private NormalMoves normal = new NormalMoves();
-    private PoisonMoves poison = new PoisonMoves();
-    private PsychicMoves psychic = new PsychicMoves();
-    private RockMoves rock = new RockMoves();
-    private SteelMoves steel = new SteelMoves();
-    private WaterMoves water = new WaterMoves();
 
     public Pokemon[] p = {};
 }
