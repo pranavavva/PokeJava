@@ -25,9 +25,9 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class WaterPokemon {
 
-    private Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, flashCannon, waterPulse, bite,
+    private static Pokemon blastoise = new Pokemon("Blastoise", Type.WATER, 362.0, 291, 328, flashCannon, waterPulse, bite,
             hydroPump);
 
 
-    public Pokemon[] p = {blastoise};
+    public static Pokemon[] p = {blastoise};
 }

@@ -23,8 +23,8 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class GrassPokemon {
 
-    private Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, petalDance, solarBeam,
+    private static Pokemon venusaur = new Pokemon("Venusaur", Type.GRASS, 364.0, 289, 291, petalDance, solarBeam,
             sludgeBomb, earthquake);
 
-    public Pokemon[] p = {venusaur};
+    public static Pokemon[] p = {venusaur};
 }

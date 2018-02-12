@@ -24,7 +24,7 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class FairyPokemon {
 
-    private Pokemon  clefable = new Pokemon("Clefable", Type.FAIRY, 394, 262, 269, disarmingVoice, psyshock, blizzard, thunderbolt);
+    private static Pokemon  clefable = new Pokemon("Clefable", Type.FAIRY, 394, 262, 269, disarmingVoice, psyshock, blizzard, thunderbolt);
 
-    public Pokemon[] p        = {clefable};
+    public static Pokemon[] p        = {clefable};
 }

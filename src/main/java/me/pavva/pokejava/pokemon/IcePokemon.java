@@ -25,7 +25,7 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class IcePokemon {
 
-    private Pokemon avalugg = new Pokemon("Avalugg", Type.ICE, 394.0, 366, 513, skullBash, bite, blizzard, iceBall);
+    private static Pokemon avalugg = new Pokemon("Avalugg", Type.ICE, 394.0, 366, 513, skullBash, bite, blizzard, iceBall);
 
-    public Pokemon[] p = {avalugg};
+    public static Pokemon[] p = {avalugg};
 }

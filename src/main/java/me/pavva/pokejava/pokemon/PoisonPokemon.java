@@ -24,7 +24,7 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 
 public class PoisonPokemon {
-    private Pokemon muk = new Pokemon("Muk", Type.POISON, 414.0, 339, 273, gunkShot, pound, mudBomb, sludgeBomb);
+    private static Pokemon muk = new Pokemon("Muk", Type.POISON, 414.0, 339, 273, gunkShot, pound, mudBomb, sludgeBomb);
 
-    public Pokemon[] p = {muk};
+    public static Pokemon[] p = {muk};
 }

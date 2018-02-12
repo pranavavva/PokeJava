@@ -25,5 +25,5 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 public class SteelPokemon {
 
 
-    public Pokemon[] p = {};
+    public static Pokemon[] p = {};
 }

@@ -23,5 +23,5 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class FlyingPokemon {
 
-    public Pokemon[] p = {};
+    public static Pokemon[] p = {};
 }

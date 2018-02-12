@@ -24,8 +24,8 @@ import static me.pavva.pokejava.moves.WaterMove.*;
 
 public class FirePokemon {
     
-    private Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, wingAttack, flareBlitz,
+    private static Pokemon charizard = new Pokemon("Charizard", Type.FIRE, 360.0, 293, 280, wingAttack, flareBlitz,
             heatWave, dragonClaw);
 
-    public Pokemon[] p = {charizard};
+    public static Pokemon[] p = {charizard};
 }
