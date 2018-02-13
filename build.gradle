@@ -1,8 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'application'
 
 group = 'me.pavva.PokeJava'
-version = '4.2.0'
+version = '4.2.2'
 
 description = "PokeJava is a Pokemon Battle Simulator written in Java from scratch"
 
@@ -34,4 +35,10 @@ javadoc {
     source = sourceSets.main.allJava
     options.memberLevel = JavadocMemberLevel.PRIVATE
     classpath = project.sourceSets.main.allJava
+}
+
+mainClassName = "me.pavva.pokejava.App"
+
+run {
+    standardInput = System.in
 }
