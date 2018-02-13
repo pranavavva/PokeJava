@@ -10,10 +10,31 @@ package me.pavva.pokejava;
  * @see me.pavva.pokejava.Pokemon
  */
 public class Move {
-
+    
+    /**
+     * An immutable name for the move
+     */
     private final String name;
+    
+    /**
+     * An immutable Type for the move
+     * 
+     * @see Type
+     */
     private final Type   type;
+    
+    /**
+     * An immutable power value for the move. Used in damage calculation
+     * 
+     * @see Move#attack(Pokemon, Pokemon, Move)
+     */
     private final int    power;
+    
+    /**
+     * A mutable "power points" value for the move. This value eventually be used in determining whether
+     * a {@link Pokemon Pokemon} can still use the move. In other words, a move can only be used if it
+     * still have power points available. One power point is consumed every time a move is used.
+     */
     private int          points;
 
     /**

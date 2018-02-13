@@ -8,32 +8,66 @@ import me.pavva.pokejava.pokemon.*;
 /**
  * Entrypoint to Pokemon Battle Simulator.
  * 
- * Contains game setup. Uses subroutines in {@link me.pavva.pokejava.Helper Helper.java} to seperate setup from logic.
+ * Contains game setup. Uses subroutines in {@link me.pavva.pokejava.Helper Helper} to seperate setup from logic.
  *
- * @author Pranav Avva   Github: 20avva    Web: <a href="https://20avva.github.io">20avva.github.io</a>
+ * @author Pranav Avva Github: 20avva Web: <a href="https://20avva.github.io">20avva.github.io</a>
  * @version 4.1
  * @see me.pavva.pokejava.Pokemon
  * @see me.pavva.pokejava.Type
  * @see me.pavva.pokejava.Move
  * @see me.pavva.pokejava.Helper
- * @see me.pavva.pokejava.moves
- * @see me.pavva.pokejava.pokemon
  * @since Java 1.7
  */
 public class App {
-
+    
+    /**
+     * Scanner for user input
+     */
     static Scanner            sc               = new Scanner(System.in);  // Used for User Input
+    
+    /**
+     * Random number generator, used for computer move and pokemon selection.
+     */
     static Random             rand             = new Random();            // Random Numbers for CPU move selection
+    
+    /**
+     * The user's pokemon
+     * 
+     * @see Pokemon
+     */
     static Pokemon            yourPoke         = new Pokemon();
+    
+    /**
+     * The opponent's (computer's) pokemon
+     * 
+     * @see Pokemon
+     */
     static Pokemon            opponentPoke     = new Pokemon();
-
+    
+    /**
+     * A temporary variable to store the user's move choice
+     */
     static int                decision         = 0;
+    
+    /**
+     * A temporary vaiable to store the opponent's move choice
+     */
     static int                opponentDecision = 0;
+    
+    /**
+     * An ArrayList to hold all the pokemon from which the user and the computer can pick pokemon from
+     * 
+     * @see Pokemon
+     */
     static ArrayList<Pokemon> poke             = new ArrayList<Pokemon>();
 
 
     /**
-     * Main method in the Pokemon Battle Simulator
+     * Main method in the Pokemon Battle Simulator.<br><br>
+     * 
+     * <code>main()</code> invokes methods from {@link Helper Helper} for the main game loop. This method, 
+     * however, adds all the pokemon to a master list, which is then presented to the user with the 
+     * {@link Pokemon Pokemon} that they can choose, after whom the computer selects a pokemon. 
      *
      * @param args A string array created from command-line arguments. Not used in this program.
      */

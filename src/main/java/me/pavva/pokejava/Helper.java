@@ -10,7 +10,14 @@ package me.pavva.pokejava;
 public class Helper {
 
     /**
-     * A static method which contains the code for the user's game turn.
+     * Contains the code for the <i>user's</i> game turn.
+     * 
+     * The game will ask the user to select a move, then it will calculate the damage done to the opponent pokemon
+     * based upon the move, the type of the move used, and the type of the opponent.
+     * 
+     * @see Move
+     * @see Type
+     * @see Move#attack(Pokemon, Pokemon, Move)
      */
     static void yourMove() {
         App.decision = App.sc.nextInt();
