@@ -9,6 +9,7 @@ description = "PokeJava is a Pokemon Battle Simulator written in Java from scrat
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
