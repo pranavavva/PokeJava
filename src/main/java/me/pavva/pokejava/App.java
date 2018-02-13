@@ -139,7 +139,7 @@ public class App {
 
             Helper.moveList();
 
-            Helper.yourMove();
+            Helper.userMove();
 
             Helper.healthCheck();
 

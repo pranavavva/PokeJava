@@ -19,22 +19,46 @@ public class Helper {
      * @see Type
      * @see Move#attack(Pokemon, Pokemon, Move)
      */
-    static void yourMove() {
+    static void userMove() {
         App.decision = App.sc.nextInt();
         System.out.println("\n");
 
         switch (App.decision) {
             case 1:
-                Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove1());
+                if (App.yourPoke.getMove1().getPoints() > 0) {
+                    Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove1());
+                } else {
+                    System.out.println("No Points left for this move!");
+                    userMove();
+                }
+
                 break;
             case 2:
-                Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove2());
+                if (App.yourPoke.getMove2().getPoints() > 0) {
+                    Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove2());
+                } else {
+                    System.out.println("No Points left for this move!");
+                    userMove();
+                }
+                
                 break;
             case 3:
-                Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove3());
+                if (App.yourPoke.getMove3().getPoints() > 0) {
+                    Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove3());
+                } else {
+                    System.out.println("No Points left for this move!");
+                    userMove();
+                }
+                
                 break;
             case 4:
-                Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove4());
+                if (App.yourPoke.getMove4().getPoints() > 0) {
+                    Move.attack(App.yourPoke, App.opponentPoke, App.yourPoke.getMove4());
+                } else {
+                    System.out.println("No Points left for this move!");
+                    userMove();
+                }
+                
                 break;
             case 5:
 
@@ -73,7 +97,10 @@ public class Helper {
 
 
     /**
-     * A static method which contains the code for the CPU's game turn
+     * A static method which contains the code for the computer's game turn.
+     * <br><br>
+     * 
+     * The computer will generate a random number which would correspond to the move that will be used
      */
     static void opponentMove() {
 

@@ -120,5 +120,7 @@ public class Move {
         double damage = (((((((((2 * level) / 5) + 2) * power) * (a / d))) / 50) + 2) * modifier);
 
         defender.setHealth(defender.getHealth() - damage);
+        
+        attackerMove.points--;
     }
 }
