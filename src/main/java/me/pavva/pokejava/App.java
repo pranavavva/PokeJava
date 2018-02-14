@@ -71,7 +71,7 @@ public class App {
      *
      * @param args A string array created from command-line arguments. Not used in this program.
      */
-    public static void main(String[] args) throws IllegalArgumentException {
+    public static void main(String[] args) {
 
         int yourPick;
         int opponentPick;

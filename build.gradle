@@ -1,6 +1,12 @@
+plugins {
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.6.3'
+}
+
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'application'
+
 
 group = 'me.pavva.PokeJava'
 version = '4.2.2'
@@ -42,4 +48,11 @@ mainClassName = "me.pavva.pokejava.App"
 
 run {
     standardInput = System.in
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
 }
