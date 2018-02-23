@@ -30,3 +30,9 @@ stage
 prime
 .vscode
 .mypy_cache
+*.class
+bin/
+.vscode/
+.settings/
+.idea/
+.gradle/
