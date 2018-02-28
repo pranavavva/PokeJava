@@ -9,6 +9,6 @@ public class AppTest {
     
     // @Test
     public void testMain() {
-        app.main(new String[]{});v 
+        app.main(new String[]{});
     }
 }
