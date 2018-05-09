@@ -6,9 +6,9 @@ public enum DamageEffectivity {
     REGULAR(1.0),
     SUPER_EFFECTIVE(2.0);
     
-    private Double effectivity;
+    private double effectivity;
 
-    private DamageEffectivity(Double effectivity) {
+    private DamageEffectivity(double effectivity) {
         this.effectivity = effectivity;
     }
 
@@ -18,7 +18,7 @@ public enum DamageEffectivity {
 
     @Override
     public String toString() {
-        return this.effectivity.toString();
+        return Double.toString(this.effectivity);
     }
 
 }
