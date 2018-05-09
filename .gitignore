@@ -1,5 +1,7 @@
 ###IDEA###
 
+.project
+.classpath
 .idea/
 *.iml
 docs/reference.md
