@@ -17,62 +17,50 @@ public class MoveTest {
 
     /**
      * Tests {@link Move#setPoints(int) setPoints()} for proper method returns
-     *
-     * @throws Exception Caught Exception, if any
      */
     @Test
-    public void setPoints() throws Exception {
+    public void setPoints() {
         move1.setPoints(10);
         Assert.assertEquals(10, move1.getPoints());
     }
 
     /**
      * Tests {@link Move#getName()} for proper method returns
-     *
-     * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getName() throws Exception {
+    public void getName() {
         Assert.assertEquals("Move", move1.getName());
     }
 
     /**
      * Tests {@link Move#getType()} for proper method returns
-     *
-     * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getType() throws Exception {
+    public void getType() {
         Assert.assertEquals(Type.NORMAL, move1.getType());
     }
 
     /**
      * Tests {@link Move#getPower()} for proper method returns
-     *
-     * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getPower() throws Exception {
+    public void getPower() {
         Assert.assertEquals(100, move1.getPower());
     }
 
     /**
      * Tests {@link Move#getPoints()} for proper method returns
-     *
-     * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getPoints() throws Exception {
+    public void getPoints() {
         Assert.assertEquals(100, move1.getPoints());
     }
 
     /**
      * Tests {@link Move#attack(Pokemon, Pokemon, Move)} for proper method returns
-     *
-     * @throws Exception Caught Exception, if any
      */
     @Test
-    public void attack() throws Exception {
+    public void attack() {
         Move.attack(attacker, defender, attacker.getMove1());
         Assert.assertEquals(defender.getHealth(), -29, 0.1);
     }

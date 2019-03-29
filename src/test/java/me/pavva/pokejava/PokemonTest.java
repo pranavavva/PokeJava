@@ -37,7 +37,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void setHealth() throws Exception {
+    public void setHealth() {
         pokemon1.setHealth(10);
         Assert.assertEquals(10.0, pokemon1.getHealth(), 0.1);
     }
@@ -48,7 +48,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getName() throws Exception {
+    public void getName() {
         Assert.assertEquals("Pokemon One", pokemon1.getName());
     }
 
@@ -58,7 +58,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getType() throws Exception {
+    public void getType() {
         Assert.assertEquals(Type.NORMAL, pokemon1.getType());
     }
 
@@ -68,7 +68,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getHealth() throws Exception {
+    public void getHealth() {
         Assert.assertEquals(100.0, pokemon1.getHealth(), 0.1);
     }
 
@@ -78,7 +78,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getAttack() throws Exception {
+    public void getAttack() {
         Assert.assertEquals(100, pokemon1.getAttack(), 0.1);
     }
 
@@ -88,7 +88,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getDefense() throws Exception {
+    public void getDefense() {
         Assert.assertEquals(100, pokemon1.getDefense(), 0.1);
     }
 
@@ -98,7 +98,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getMoveList() throws Exception {
+    public void getMoveList() {
         for (int k = 0; k < 3; k++) {
             Assert.assertEquals(listOfMoves.get(k).getName(), pokemon1.getMoveList().get(k).getName());
             Assert.assertEquals(listOfMoves.get(k).getType(), pokemon1.getMoveList().get(k).getType());
@@ -113,7 +113,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getMove1() throws Exception {
+    public void getMove1() {
         Assert.assertEquals(move1.getName(), pokemon1.getMove1().getName());
     }
 
@@ -123,7 +123,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getMove2() throws Exception {
+    public void getMove2() {
         Assert.assertEquals(move1.getName(), pokemon1.getMove2().getName());
     }
 
@@ -133,7 +133,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getMove3() throws Exception {
+    public void getMove3() {
         Assert.assertEquals(move1.getName(), pokemon1.getMove3().getName());
     }
 
@@ -143,7 +143,7 @@ public class PokemonTest {
      * @throws Exception Caught Exception, if any
      */
     @Test
-    public void getMove4() throws Exception {
+    public void getMove4() {
         Assert.assertEquals(move1.getName(), pokemon1.getMove4().getName());
     }
 
