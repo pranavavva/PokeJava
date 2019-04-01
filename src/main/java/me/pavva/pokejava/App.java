@@ -123,7 +123,6 @@ public class App {
         } else {
 
             sc.close();
-            System.gc();
             throw new IllegalArgumentException("\n\n" + "Please pick an integer between 1 and " + poke.size() + ", inclusive.\n");
         }
         // END POKEMON SELECTION BLOCK
@@ -144,8 +143,7 @@ public class App {
             Helper.healthCheck();
 
         } // END GAME WHILE LOOP
-
-        System.gc();
+        
         sc.close();
         System.exit(0);
 
