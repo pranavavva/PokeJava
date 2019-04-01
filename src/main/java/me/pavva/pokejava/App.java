@@ -95,11 +95,7 @@ public class App {
         poke.addAll(Arrays.asList(SteelPokemon.p));
         poke.addAll(Arrays.asList(WaterPokemon.p));
 
-        Collections.sort(poke, new Comparator<Pokemon>() {
-            public int compare(Pokemon p1, Pokemon p2) {
-                return p1.getType().compareTo(p2.getType());
-            }
-        });
+        poke.sort((poke1, poke2) -> poke1.getType().compareTo(poke2.getType()));
 
         int k = 1;
         // BEGIN POKEMON SELECTION BLOCK
