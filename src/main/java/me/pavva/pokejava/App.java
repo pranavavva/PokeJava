@@ -80,24 +80,14 @@ public class App {
         int yourPick;
         int opponentPick;
 
-        poke.addAll(Arrays.asList(BugPokemon.p));
-        poke.addAll(Arrays.asList(DarkPokemon.p));
-        poke.addAll(Arrays.asList(DragonPokemon.p));
-        poke.addAll(Arrays.asList(ElectricPokemon.p));
-        poke.addAll(Arrays.asList(FairyPokemon.p));
-        poke.addAll(Arrays.asList(FightPokemon.p));
-        poke.addAll(Arrays.asList(FirePokemon.p));
-        poke.addAll(Arrays.asList(FlyingPokemon.p));
-        poke.addAll(Arrays.asList(GhostPokemon.p));
-        poke.addAll(Arrays.asList(GrassPokemon.p));
-        poke.addAll(Arrays.asList(GroundPokemon.p));
-        poke.addAll(Arrays.asList(IcePokemon.p));
-        poke.addAll(Arrays.asList(NormalPokemon.p));
-        poke.addAll(Arrays.asList(PoisonPokemon.p));
-        poke.addAll(Arrays.asList(PsychicPokemon.p));
-        poke.addAll(Arrays.asList(RockPokemon.p));
-        poke.addAll(Arrays.asList(SteelPokemon.p));
-        poke.addAll(Arrays.asList(WaterPokemon.p));
+        Pokemon[][] pokemons = { BugPokemon.p, DarkPokemon.p, DragonPokemon.p, ElectricPokemon.p, FairyPokemon.p,
+                FightPokemon.p, FirePokemon.p, FlyingPokemon.p, GhostPokemon.p, GrassPokemon.p, GroundPokemon.p,
+                IcePokemon.p, NormalPokemon.p, PoisonPokemon.p, PsychicPokemon.p, RockPokemon.p, SteelPokemon.p,
+                WaterPokemon.p };
+
+        for (Pokemon[] pokeArr : pokemons) {
+            poke.addAll(Arrays.asList(pokeArr));
+        }
 
         poke.sort((poke1, poke2) -> poke1.getType().compareTo(poke2.getType()));
 
