@@ -33,6 +33,31 @@ public class TypeUtil {
             lookupTable.put(FIGHT, ICE, 2.0);
             lookupTable.put(FIGHT, DARK, 2.0);
             lookupTable.put(FIGHT, FAIRY, 0.5);
+            lookupTable.put(FLYING, FIGHT, 2.0);
+            lookupTable.put(FLYING, ROCK, 0.5);
+            lookupTable.put(FLYING, BUG, 2.0);
+            lookupTable.put(FLYING, STEEL, 0.5);
+            lookupTable.put(FLYING, GRASS, 2.0);
+            lookupTable.put(FLYING, ELECTRIC, 0.5);
+            lookupTable.put(POISON, POISON, 0.5);
+            lookupTable.put(POISON, GROUND, 0.5);
+            lookupTable.put(POISON, ROCK, 0.5);
+            lookupTable.put(POISON, GHOST, 0.5);
+            lookupTable.put(POISON, STEEL, 0.0);
+            lookupTable.put(POISON, GRASS, 2.0);
+            lookupTable.put(POISON, FAIRY, 2.0);
+            lookupTable.put(GROUND, FLYING, 0.0);
+            lookupTable.put(GROUND, POISON, 2.0);
+            lookupTable.put(GROUND, ROCK, 2.0);
+            lookupTable.put(GROUND, BUG, 0.5);
+            lookupTable.put(GROUND, STEEL, 2.0);
+            lookupTable.put(GROUND, FIRE, 2.0);
+            lookupTable.put(GROUND, GRASS, 0.5);
+            lookupTable.put(GROUND, ELECTRIC, 2.0);
+
+
+
+            return lookupTable;
         }
     }
 
